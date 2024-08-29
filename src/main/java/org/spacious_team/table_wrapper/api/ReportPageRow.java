@@ -26,7 +26,7 @@ public interface ReportPageRow extends Iterable<TableCell> {
      * @param i zero-based cell number
      * @return cell ot null if cell does not exist
      */
-    @Nullable
+    
     TableCell getCell(int i);
 
     /**
