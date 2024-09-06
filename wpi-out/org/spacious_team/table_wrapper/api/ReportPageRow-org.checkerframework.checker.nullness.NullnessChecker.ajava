@@ -27,7 +27,7 @@ public interface ReportPageRow extends Iterable<TableCell> {
      * @return cell ot null if cell does not exist
      */
     @org.checkerframework.dataflow.qual.Impure
-    @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable TableCell getCell( @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull int i);
+    TableCell getCell( @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull int i);
 
     /**
      * Zero-based row number

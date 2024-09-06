@@ -32,13 +32,13 @@ public interface TableRow extends ReportPageRow, Cloneable {
     Table getTable();
 
     @org.checkerframework.dataflow.qual.Impure
-    @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable TableCell getCell(TableColumnDescription column);
+    TableCell getCell(TableColumnDescription column);
 
     /**
      * Returns cell's native value
      */
     @org.checkerframework.dataflow.qual.Pure
-    @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable Object getCellValue(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull TableColumnDescription column);
+    Object getCellValue(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull TableColumnDescription column);
 
     /**
      * @throws RuntimeException if method can't extract int value
@@ -86,7 +86,7 @@ public interface TableRow extends ReportPageRow, Cloneable {
      * @return return cell value or defaultValue if the cell is missing or the type does not match the expected
      */
     @org.checkerframework.dataflow.qual.SideEffectFree
-    default @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable Object getCellValueOrDefault(TableColumnDescription column, Object defaultValue) {
+    default Object getCellValueOrDefault(TableColumnDescription column, Object defaultValue) {
         try {
             return getCellValue(column);
         } catch (Exception e) {

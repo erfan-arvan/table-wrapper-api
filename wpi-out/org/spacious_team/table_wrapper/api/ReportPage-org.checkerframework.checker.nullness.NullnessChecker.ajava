@@ -169,7 +169,7 @@ public interface ReportPage {
      * For vertical table of key-value records (table with two columns), search and return value for requested key.
      */
     @org.checkerframework.dataflow.qual.Pure
-    default @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable Object getNextColumnValue(String firstColumnValuePrefix) {
+    default Object getNextColumnValue(String firstColumnValuePrefix) {
         TableCellAddress address = findByPrefix(firstColumnValuePrefix);
         ReportPageRow row = getRow(address.getRow());
         if (row != null) {
@@ -200,7 +200,7 @@ public interface ReportPage {
     int getLastRowNum();
 
     @org.checkerframework.dataflow.qual.Impure
-    default @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable TableCell getCell(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull TableCellAddress address) {
+    default TableCell getCell(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull TableCellAddress address) {
         ReportPageRow row = getRow(address.getRow());
         return (row == null) ? null : row.getCell(address.getColumn());
     }

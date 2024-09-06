@@ -129,7 +129,7 @@ public interface CellDataAccessObject<C, R extends ReportPageRow> {
     }
 
     @org.checkerframework.dataflow.qual.Pure
-    default @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable Object getValue(@org.checkerframework.checker.nullness.qual.Nullable R row, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Integer cellIndex) {
+    default Object getValue(@org.checkerframework.checker.nullness.qual.Nullable R row, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Integer cellIndex) {
         C cell = getCell(row, cellIndex);
         return (cell == null) ? null : getValue(cell);
     }

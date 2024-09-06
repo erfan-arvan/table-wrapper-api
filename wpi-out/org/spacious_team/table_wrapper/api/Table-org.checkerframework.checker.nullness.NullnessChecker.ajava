@@ -81,13 +81,13 @@ public interface Table extends Iterable<TableRow> {
      * @return row containing cell with exact value or null if not found
      */
     @org.checkerframework.dataflow.qual.Impure
-    @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable TableRow findRow(Object value);
+    TableRow findRow(Object value);
 
     /**
      * @return row containing cell starting with prefix or null if not found
      */
     @org.checkerframework.dataflow.qual.Impure
-    @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable TableRow findRowByPrefix(String prefix);
+    TableRow findRowByPrefix(String prefix);
 
     @org.checkerframework.dataflow.qual.Pure
     Map<TableColumn, Integer> getHeaderDescription();
