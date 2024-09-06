@@ -37,31 +37,31 @@ public interface TableCell {
     /**
      * @throws RuntimeException if can't extract int value
      */
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
       int getIntValue( TableCell this);
 
     /**
      * @throws RuntimeException if can't extract long value
      */
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
       long getLongValue( TableCell this);
 
     /**
      * @throws RuntimeException if can't extract Double value
      */
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
      Double getDoubleValue( TableCell this);
 
     /**
      * @throws RuntimeException if can't extract BigDecimal value
      */
-    @org.checkerframework.dataflow.qual.Impure
+    @org.checkerframework.dataflow.qual.Pure
      BigDecimal getBigDecimalValue( TableCell this);
 
     /**
      * @throws RuntimeException if can't extract string value
      */
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
      String getStringValue( TableCell this);
 
     /**
@@ -127,7 +127,7 @@ public interface TableCell {
     /**
      * @return return cell value or defaultValue if the cell is missing or the type does not match the expected
      */
-    @org.checkerframework.dataflow.qual.Impure
+    @org.checkerframework.dataflow.qual.SideEffectFree
     default  BigDecimal getBigDecimalValueOrDefault(BigDecimal defaultValue) {
         try {
             return getBigDecimalValue();

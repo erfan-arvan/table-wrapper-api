@@ -18,6 +18,7 @@
 
 package org.spacious_team.table_wrapper.api;
 
+import javax.annotation.Nullable;
 import java.math.BigDecimal;
 import java.time.Instant;
 import java.time.LocalDateTime;
@@ -25,16 +26,18 @@ import java.time.LocalDateTime;
 /**
  * {@link TableRow} subclass can be mutable. Use {@link #clone()} to make copy.
  */
-@SuppressWarnings("unused")
+
 public interface TableRow extends ReportPageRow, Cloneable {
 
     Table getTable();
 
+    
     TableCell getCell(TableColumnDescription column);
 
     /**
      * Returns cell's native value
      */
+    
     Object getCellValue(TableColumnDescription column);
 
     /**
@@ -75,7 +78,8 @@ public interface TableRow extends ReportPageRow, Cloneable {
     /**
      * @return return cell value or defaultValue if the cell is missing or the type does not match the expected
      */
-    default Object getCellValueOrDefault(TableColumnDescription column, Object defaultValue) {
+    
+    default Object getCellValueOrDefault(TableColumnDescription column,  Object defaultValue) {
         try {
             return getCellValue(column);
         } catch (Exception e) {

@@ -18,6 +18,7 @@
 
 package org.spacious_team.table_wrapper.api;
 
+import javax.annotation.Nullable;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +27,7 @@ import java.util.function.BiPredicate;
 import java.util.function.Function;
 import java.util.stream.Stream;
 
-@SuppressWarnings("unused")
+
 public interface Table extends Iterable<TableRow> {
 
     /**
@@ -68,16 +69,19 @@ public interface Table extends Iterable<TableRow> {
      * @return row object or null is row does not exist
      * @apiNote Method impl should return {@link CellDataAccessObject} aware {@link ReportPageRow} impl
      */
+    
     ReportPageRow getRow(int i);
 
     /**
      * @return row containing cell with exact value or null if not found
      */
+    
     TableRow findRow(Object value);
 
     /**
      * @return row containing cell starting with prefix or null if not found
      */
+    
     TableRow findRowByPrefix(String prefix);
 
     Map<TableColumn, Integer> getHeaderDescription();

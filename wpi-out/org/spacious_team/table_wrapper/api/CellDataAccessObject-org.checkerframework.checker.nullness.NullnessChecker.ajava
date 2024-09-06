@@ -40,7 +40,7 @@ public interface CellDataAccessObject<C, R extends ReportPageRow> {
     @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String NO_CELL_VALUE_EXCEPTION_MESSAGE = "Cell doesn't contains value";
 
     @org.checkerframework.dataflow.qual.Pure
-    C getCell(R row, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable Integer cellIndex);
+    C getCell(@org.checkerframework.checker.nullness.qual.Nullable R row, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable Integer cellIndex);
 
     @org.checkerframework.dataflow.qual.Pure
     Object getValue(C cell);
@@ -48,7 +48,7 @@ public interface CellDataAccessObject<C, R extends ReportPageRow> {
     /**
      * @throws RuntimeException if method can't extract int value
      */
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
     default  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull int getIntValue(C cell) {
         return (int) getLongValue(cell);
     }
@@ -56,7 +56,7 @@ public interface CellDataAccessObject<C, R extends ReportPageRow> {
     /**
      * @throws RuntimeException if method can't extract long value
      */
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
     default  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull long getLongValue(C cell) {
         Object value = getValue(cell);
         if (value instanceof Number) {
@@ -98,7 +98,7 @@ public interface CellDataAccessObject<C, R extends ReportPageRow> {
      * @see <a href="https://stackoverflow.com/questions/6787142/bigdecimal-equals-versus-compareto">Stack overflow</a>
      * for BigDecimal values equality
      */
-    @org.checkerframework.dataflow.qual.Impure
+    @org.checkerframework.dataflow.qual.Pure
     default @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull BigDecimal getBigDecimalValue(C cell) {
         String number = getStringValue(cell);
         number = number.replace(',', '.');
@@ -108,7 +108,7 @@ public interface CellDataAccessObject<C, R extends ReportPageRow> {
     /**
      * @throws RuntimeException if method can't extract string value
      */
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
     default @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String getStringValue(C cell) {
         return requireNonNull(getValue(cell), "Not a string").toString();
     }
@@ -136,7 +136,7 @@ public interface CellDataAccessObject<C, R extends ReportPageRow> {
     /**
      * @throws RuntimeException if method can't extract int value
      */
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
     default  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull int getIntValue(@org.checkerframework.checker.nullness.qual.Nullable R row, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable Integer cellIndex) {
         C cell = requireNonNull(getCell(row, cellIndex), "Cell not found");
         return getIntValue(cell);
@@ -145,7 +145,7 @@ public interface CellDataAccessObject<C, R extends ReportPageRow> {
     /**
      * @throws RuntimeException if method can't extract long value
      */
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
     default  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull long getLongValue(@org.checkerframework.checker.nullness.qual.Nullable R row, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable Integer cellIndex) {
         C cell = requireNonNull(getCell(row, cellIndex), "Cell not found");
         return getLongValue(cell);
@@ -154,7 +154,7 @@ public interface CellDataAccessObject<C, R extends ReportPageRow> {
     /**
      * @throws RuntimeException if method can't extract Double value
      */
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
     default  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull double getDoubleValue(@org.checkerframework.checker.nullness.qual.Nullable R row, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable Integer cellIndex) {
         C cell = requireNonNull(getCell(row, cellIndex), "Cell not found");
         return getDoubleValue(cell);
@@ -163,7 +163,7 @@ public interface CellDataAccessObject<C, R extends ReportPageRow> {
     /**
      * @throws RuntimeException if method can't extract BigDecimal value
      */
-    @org.checkerframework.dataflow.qual.Impure
+    @org.checkerframework.dataflow.qual.Pure
     default @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull BigDecimal getBigDecimalValue(@org.checkerframework.checker.nullness.qual.Nullable R row, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable Integer cellIndex) {
         C cell = requireNonNull(getCell(row, cellIndex), "Cell not found");
         return getBigDecimalValue(cell);
@@ -172,7 +172,7 @@ public interface CellDataAccessObject<C, R extends ReportPageRow> {
     /**
      * @throws RuntimeException if method can't extract string value
      */
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
     default @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String getStringValue(@org.checkerframework.checker.nullness.qual.Nullable R row, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable Integer cellIndex) {
         C cell = requireNonNull(getCell(row, cellIndex), "Cell not found");
         return getStringValue(cell);
@@ -181,7 +181,7 @@ public interface CellDataAccessObject<C, R extends ReportPageRow> {
     /**
      * @throws RuntimeException if method can't extract instant value
      */
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
     default @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Instant getInstantValue(@org.checkerframework.checker.nullness.qual.Nullable R row, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable Integer cellIndex) {
         C cell = requireNonNull(getCell(row, cellIndex), "Cell not found");
         return getInstantValue(cell);

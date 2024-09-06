@@ -31,7 +31,7 @@ public class TableFactoryRegistry {
         factories.add(tableFactory);
     }
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
     public static  Collection<TableFactory> getAll() {
         return Collections.unmodifiableCollection(factories);
     }

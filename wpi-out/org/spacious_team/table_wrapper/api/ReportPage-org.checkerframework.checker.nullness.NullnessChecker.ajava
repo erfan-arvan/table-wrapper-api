@@ -123,7 +123,7 @@ public interface ReportPage {
      *
      * @return cell address or {@link TableCellAddress#NOT_FOUND}
      */
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
     default @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull TableCellAddress findByPrefix(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String prefix) {
         return findByPrefix(prefix, 0);
     }
@@ -134,7 +134,7 @@ public interface ReportPage {
      * @param startRow search rows start from this
      * @return cell address or {@link TableCellAddress#NOT_FOUND}
      */
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
     default @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull TableCellAddress findByPrefix(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String prefix,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull int startRow) {
         return findByPrefix(prefix, startRow, Integer.MAX_VALUE);
     }
@@ -146,7 +146,7 @@ public interface ReportPage {
      * @param endRow   search rows excluding this, can handle values greater than real rows count
      * @return cell address or {@link TableCellAddress#NOT_FOUND}
      */
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
     default @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull TableCellAddress findByPrefix(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String prefix,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull int startRow,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull int endRow) {
         return findByPrefix(prefix, startRow, endRow, 0, Integer.MAX_VALUE);
     }
@@ -160,7 +160,7 @@ public interface ReportPage {
      * @param endColumn   search columns excluding this, can handle values greater than real columns count
      * @return cell address or {@link TableCellAddress#NOT_FOUND}
      */
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
     default @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull TableCellAddress findByPrefix(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String prefix,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull int startRow,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull int endRow,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull int startColumn,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull int endColumn) {
         return prefix == null ? TableCellAddress.NOT_FOUND : find(startRow, endRow, startColumn, endColumn, getCellStringValueIgnoreCasePrefixPredicate(prefix));
     }
@@ -168,7 +168,7 @@ public interface ReportPage {
     /**
      * For vertical table of key-value records (table with two columns), search and return value for requested key.
      */
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
     default @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable Object getNextColumnValue(String firstColumnValuePrefix) {
         TableCellAddress address = findByPrefix(firstColumnValuePrefix);
         ReportPageRow row = getRow(address.getRow());

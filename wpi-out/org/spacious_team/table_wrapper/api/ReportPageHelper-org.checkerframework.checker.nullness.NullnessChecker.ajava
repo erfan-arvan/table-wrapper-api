@@ -22,7 +22,7 @@ import java.util.function.Predicate;
 @org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
 class ReportPageHelper {
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
     static @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Predicate<Object> getCellStringValueIgnoreCasePrefixPredicate(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String prefix) {
         String lowercasePrefix = prefix.trim().toLowerCase();
         return (cell) -> (cell instanceof String) && ((String) cell).trim().toLowerCase().startsWith(lowercasePrefix);
