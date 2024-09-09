@@ -23,18 +23,18 @@ public class TableCellAddress {
     private final int row;
     private final int column;
 
-    @java.lang.SuppressWarnings("all")
+    
     public int getRow() {
         return this.row;
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     public int getColumn() {
         return this.column;
     }
 
     @java.lang.Override
-    @java.lang.SuppressWarnings("all")
+    
     public boolean equals(final java.lang.Object o) {
         if (o == this) return true;
         if (!(o instanceof TableCellAddress)) return false;
@@ -45,13 +45,13 @@ public class TableCellAddress {
         return true;
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     protected boolean canEqual(final java.lang.Object other) {
         return other instanceof TableCellAddress;
     }
 
     @java.lang.Override
-    @java.lang.SuppressWarnings("all")
+    
     public int hashCode() {
         final int PRIME = 59;
         int result = 1;
@@ -61,12 +61,12 @@ public class TableCellAddress {
     }
 
     @java.lang.Override
-    @java.lang.SuppressWarnings("all")
+    
     public java.lang.String toString() {
         return "TableCellAddress(row=" + this.getRow() + ", column=" + this.getColumn() + ")";
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     public TableCellAddress(final int row, final int column) {
         this.row = row;
         this.column = column;

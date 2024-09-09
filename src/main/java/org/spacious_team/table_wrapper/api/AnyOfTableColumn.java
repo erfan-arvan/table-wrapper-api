@@ -39,13 +39,13 @@ public class AnyOfTableColumn implements TableColumn {
     }
 
     @java.lang.Override
-    @java.lang.SuppressWarnings("all")
+    
     public java.lang.String toString() {
         return "AnyOfTableColumn(columns=" + java.util.Arrays.deepToString(this.columns) + ")";
     }
 
     @java.lang.Override
-    @java.lang.SuppressWarnings("all")
+    
     public boolean equals(final java.lang.Object o) {
         if (o == this) return true;
         if (!(o instanceof AnyOfTableColumn)) return false;
@@ -55,13 +55,13 @@ public class AnyOfTableColumn implements TableColumn {
         return true;
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     protected boolean canEqual(final java.lang.Object other) {
         return other instanceof AnyOfTableColumn;
     }
 
     @java.lang.Override
-    @java.lang.SuppressWarnings("all")
+    
     public int hashCode() {
         final int PRIME = 59;
         int result = 1;
@@ -69,7 +69,7 @@ public class AnyOfTableColumn implements TableColumn {
         return result;
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     public AnyOfTableColumn(final TableColumn[] columns) {
         this.columns = columns;
     }

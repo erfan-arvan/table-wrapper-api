@@ -114,28 +114,28 @@ public class TableCellRange {
         }
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     public int getFirstRow() {
         return this.firstRow;
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     public int getLastRow() {
         return this.lastRow;
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     public int getFirstColumn() {
         return this.firstColumn;
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     public int getLastColumn() {
         return this.lastColumn;
     }
 
     @java.lang.Override
-    @java.lang.SuppressWarnings("all")
+    
     public boolean equals(final java.lang.Object o) {
         if (o == this) return true;
         if (!(o instanceof TableCellRange)) return false;
@@ -148,13 +148,13 @@ public class TableCellRange {
         return true;
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     protected boolean canEqual(final java.lang.Object other) {
         return other instanceof TableCellRange;
     }
 
     @java.lang.Override
-    @java.lang.SuppressWarnings("all")
+    
     public int hashCode() {
         final int PRIME = 59;
         int result = 1;
@@ -166,12 +166,12 @@ public class TableCellRange {
     }
 
     @java.lang.Override
-    @java.lang.SuppressWarnings("all")
+    
     public java.lang.String toString() {
         return "TableCellRange(firstRow=" + this.getFirstRow() + ", lastRow=" + this.getLastRow() + ", firstColumn=" + this.getFirstColumn() + ", lastColumn=" + this.getLastColumn() + ")";
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     public TableCellRange(final int firstRow, final int lastRow, final int firstColumn, final int lastColumn) {
         this.firstRow = firstRow;
         this.lastRow = lastRow;

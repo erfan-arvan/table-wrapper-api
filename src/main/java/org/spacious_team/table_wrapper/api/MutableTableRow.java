@@ -120,29 +120,29 @@ class MutableTableRow<T extends ReportPageRow> implements TableRow {
         }
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     public MutableTableRow(final Table table, final CellDataAccessObject<?, T> dao) {
         this.table = table;
         this.dao = dao;
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     public Table getTable() {
         return this.table;
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     public CellDataAccessObject<?, T> getDao() {
         return this.dao;
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     public T getRow() {
         return this.row;
     }
 
     @java.lang.Override
-    @java.lang.SuppressWarnings("all")
+    
     public boolean equals(final java.lang.Object o) {
         if (o == this) return true;
         if (!(o instanceof MutableTableRow)) return false;
@@ -160,13 +160,13 @@ class MutableTableRow<T extends ReportPageRow> implements TableRow {
         return true;
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     protected boolean canEqual(final java.lang.Object other) {
         return other instanceof MutableTableRow;
     }
 
     @java.lang.Override
-    @java.lang.SuppressWarnings("all")
+    
     public int hashCode() {
         final int PRIME = 59;
         int result = 1;
@@ -180,12 +180,12 @@ class MutableTableRow<T extends ReportPageRow> implements TableRow {
     }
 
     @java.lang.Override
-    @java.lang.SuppressWarnings("all")
+    
     public java.lang.String toString() {
         return "MutableTableRow(table=" + this.getTable() + ", dao=" + this.getDao() + ", row=" + this.getRow() + ")";
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     void setRow(final T row) {
         this.row = row;
     }

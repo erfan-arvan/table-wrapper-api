@@ -67,17 +67,17 @@ public abstract class AbstractTableCell<T> implements TableCell {
         return dao.getLocalDateTimeValue(cell);
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     protected T getCell() {
         return this.cell;
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     protected CellDataAccessObject<T, ?> getDao() {
         return this.dao;
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     protected AbstractTableCell(final T cell, final CellDataAccessObject<T, ?> dao) {
         this.cell = cell;
         this.dao = dao;

@@ -6,62 +6,155 @@
 [INFO] --------------------------------[ jar ]---------------------------------
 [INFO] 
 [INFO] --- resources:3.3.1:resources (default-resources) @ table-wrapper-api ---
-[INFO] skip non existing resourceDirectory /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/resources
+[INFO] skip non existing resourceDirectory /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/resources
 [INFO] 
 [INFO] --- compiler:3.11.0:compile (default-compile) @ table-wrapper-api ---
 [INFO] Changes detected - recompiling the module! :source
 [INFO] Compiling 28 source files with javac [forked debug target 11] to target/classes
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/ReportPage.java:[179,15] [return] incompatible types in return.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/ReportPage.java:[179,15] [return] incompatible types in return.
   type of expression: null (NullType)
   method return type: @Initialized @NonNull Object
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/ReportPage.java:[198,29] [return] incompatible types in return.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/ReportPage.java:[198,29] [return] incompatible types in return.
   type of expression: @Initialized @Nullable TableCell
   method return type: @Initialized @NonNull TableCell
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[105,47] [return] incompatible types in return.
-  type of expression: @Initialized @Nullable Integer
-  method return type: @Initialized @NonNull Integer
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[128,30] [return] incompatible types in return.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableCellAddress.java:[38,49] [override.param] Incompatible parameter type for o.
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull TableCellAddress
+    @Initialized @NonNull boolean equals(@Initialized @NonNull TableCellAddress this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableCellAddress.java:[42,27] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.canEqual not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableCellAddress.java:[43,23] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getRow not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableCellAddress.java:[43,41] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.getRow not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableCellAddress.java:[44,26] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getColumn not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableCellAddress.java:[44,47] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.getColumn not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableCellAddress.java:[58,45] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getRow not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableCellAddress.java:[59,48] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getColumn not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableCellAddress.java:[66,52] [purity.not.sideeffectfree.call] call to side-effecting this.getRow not allowed in side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableCellAddress.java:[66,85] [purity.not.sideeffectfree.call] call to side-effecting this.getColumn not allowed in side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableCellRange.java:[139,49] [override.param] Incompatible parameter type for o.
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull TableCellRange
+    @Initialized @NonNull boolean equals(@Initialized @NonNull TableCellRange this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableCellRange.java:[143,27] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.canEqual not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableCellRange.java:[144,28] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getFirstRow not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableCellRange.java:[144,51] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.getFirstRow not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableCellRange.java:[145,27] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getLastRow not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableCellRange.java:[145,49] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.getLastRow not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableCellRange.java:[146,31] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getFirstColumn not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableCellRange.java:[146,57] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.getFirstColumn not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableCellRange.java:[147,30] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getLastColumn not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableCellRange.java:[147,55] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.getLastColumn not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableCellRange.java:[161,50] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getFirstRow not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableCellRange.java:[162,49] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getLastRow not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableCellRange.java:[163,53] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getFirstColumn not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableCellRange.java:[164,52] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getLastColumn not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableCellRange.java:[171,60] [purity.not.sideeffectfree.call] call to side-effecting this.getFirstRow not allowed in side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableCellRange.java:[171,95] [purity.not.sideeffectfree.call] call to side-effecting this.getLastRow not allowed in side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableCellRange.java:[171,138] [purity.not.sideeffectfree.call] call to side-effecting this.getFirstColumn not allowed in side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableCellRange.java:[171,179] [purity.not.sideeffectfree.call] call to side-effecting this.getLastColumn not allowed in side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[34,15] [return] incompatible types in return.
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TableCell
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[39,15] [return] incompatible types in return.
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TableCell
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[64,15] [return] incompatible types in return.
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Object
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[129,49] [override.param] Incompatible parameter type for o.
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull EmptyTableRow
+    @Initialized @NonNull boolean equals(@Initialized @NonNull EmptyTableRow this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[133,27] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.canEqual not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[134,26] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getRowNum not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[134,47] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.getRowNum not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[135,57] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getTable not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[136,59] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.getTable not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[151,48] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getRowNum not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[152,53] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getTable not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[160,53] [purity.not.sideeffectfree.call] call to side-effecting this.getTable not allowed in side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[160,86] [purity.not.sideeffectfree.call] call to side-effecting this.getRowNum not allowed in side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/AnyOfTableColumn.java:[49,49] [override.param] Incompatible parameter type for o.
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull AnyOfTableColumn
+    @Initialized @NonNull boolean equals(@Initialized @NonNull AnyOfTableColumn this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/AnyOfTableColumn.java:[53,27] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.canEqual not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[128,30] [return] incompatible types in return.
   type of expression: @Initialized @Nullable Object
   method return type: @Initialized @NonNull Object
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[135,39] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[135,39] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
   found   : C extends @Initialized @Nullable Object
   required: C extends @Initialized @NonNull Object
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[143,39] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[143,39] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
   found   : C extends @Initialized @Nullable Object
   required: C extends @Initialized @NonNull Object
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[151,39] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[151,39] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
   found   : C extends @Initialized @Nullable Object
   required: C extends @Initialized @NonNull Object
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[159,39] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[159,39] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
   found   : C extends @Initialized @Nullable Object
   required: C extends @Initialized @NonNull Object
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[167,39] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[167,39] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
   found   : C extends @Initialized @Nullable Object
   required: C extends @Initialized @NonNull Object
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[175,39] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[175,39] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
   found   : C extends @Initialized @Nullable Object
   required: C extends @Initialized @NonNull Object
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[183,39] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[183,39] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
   found   : C extends @Initialized @Nullable Object
   required: C extends @Initialized @NonNull Object
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[89,80] [argument] incompatible argument for parameter array of Arrays.stream.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableColumnImpl.java:[69,49] [override.param] Incompatible parameter type for o.
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull TableColumnImpl
+    @Initialized @NonNull boolean equals(@Initialized @NonNull TableColumnImpl this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableColumnImpl.java:[73,27] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.canEqual not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[89,80] [argument] incompatible argument for parameter array of Arrays.stream.
   found   : capture#01 extends @Initialized @NonNull TableColumnDescription @Initialized @Nullable []
   required: @Initialized @NonNull TableColumnDescription @Initialized @NonNull []
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[230,15] [return] incompatible types in return.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[230,15] [return] incompatible types in return.
   type of expression: null (NullType)
   method return type: @Initialized @NonNull MutableTableRow<R extends @Initialized @NonNull ReportPageRow>
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[34,15] [return] incompatible types in return.
-  type of expression: null (NullType)
-  method return type: @Initialized @NonNull TableCell
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[39,15] [return] incompatible types in return.
-  type of expression: null (NullType)
-  method return type: @Initialized @NonNull TableCell
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[64,15] [return] incompatible types in return.
-  type of expression: null (NullType)
-  method return type: @Initialized @NonNull Object
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[105,47] [return] incompatible types in return.
+  type of expression: @Initialized @Nullable Integer
+  method return type: @Initialized @NonNull Integer
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[124,11] [initialization.fields.uninitialized] the constructor does not initialize fields: row
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[146,49] [override.param] Incompatible parameter type for o.
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow>
+    @Initialized @NonNull boolean equals(@Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[150,27] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.canEqual not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[151,57] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getTable not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[152,59] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.getTable not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[154,53] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getDao not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[155,55] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.getDao not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[157,53] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getRow not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[158,55] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.getRow not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[173,53] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getTable not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[175,49] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getDao not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[177,49] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getRow not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[185,55] [purity.not.sideeffectfree.call] call to side-effecting this.getTable not allowed in side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[185,82] [purity.not.sideeffectfree.call] call to side-effecting this.getDao not allowed in side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[185,109] [purity.not.sideeffectfree.call] call to side-effecting this.getRow not allowed in side-effect-free method
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  4.283 s
-[INFO] Finished at: 2024-08-26T03:59:28-04:00
+[INFO] Total time:  4.254 s
+[INFO] Finished at: 2024-09-09T02:15:42-04:00
 [INFO] ------------------------------------------------------------------------

@@ -28,18 +28,18 @@ public class RelativePositionTableColumn implements TableColumn {
     }
 
     @java.lang.Override
-    @java.lang.SuppressWarnings("all")
+    
     public java.lang.String toString() {
         return "RelativePositionTableColumn(relatedTableColumn=" + this.relatedTableColumn + ", relatedOffset=" + this.relatedOffset + ")";
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     private RelativePositionTableColumn(final TableColumn relatedTableColumn, final int relatedOffset) {
         this.relatedTableColumn = relatedTableColumn;
         this.relatedOffset = relatedOffset;
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     public static RelativePositionTableColumn of(final TableColumn relatedTableColumn, final int relatedOffset) {
         return new RelativePositionTableColumn(relatedTableColumn, relatedOffset);
     }

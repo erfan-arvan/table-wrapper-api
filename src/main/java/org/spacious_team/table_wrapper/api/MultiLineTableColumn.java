@@ -61,12 +61,12 @@ public class MultiLineTableColumn implements TableColumn {
     }
 
     @java.lang.Override
-    @java.lang.SuppressWarnings("all")
+    
     public java.lang.String toString() {
         return "MultiLineTableColumn(rowDescriptors=" + java.util.Arrays.deepToString(this.rowDescriptors) + ")";
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     public MultiLineTableColumn(final TableColumn[] rowDescriptors) {
         this.rowDescriptors = rowDescriptors;
     }

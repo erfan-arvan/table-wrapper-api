@@ -38,7 +38,7 @@ public abstract class AbstractTableFactory<T extends ReportPage> implements Tabl
         return (T) reportPage;
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     protected AbstractTableFactory(final Class<T> reportPageType) {
         this.reportPageType = reportPageType;
     }

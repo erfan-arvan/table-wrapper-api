@@ -108,24 +108,24 @@ class EmptyTableRow implements TableRow {
         }
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     public EmptyTableRow(final Table table, final int rowNum) {
         this.table = table;
         this.rowNum = rowNum;
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     public Table getTable() {
         return this.table;
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     public int getRowNum() {
         return this.rowNum;
     }
 
     @java.lang.Override
-    @java.lang.SuppressWarnings("all")
+    
     public boolean equals(final java.lang.Object o) {
         if (o == this) return true;
         if (!(o instanceof EmptyTableRow)) return false;
@@ -138,13 +138,13 @@ class EmptyTableRow implements TableRow {
         return true;
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     protected boolean canEqual(final java.lang.Object other) {
         return other instanceof EmptyTableRow;
     }
 
     @java.lang.Override
-    @java.lang.SuppressWarnings("all")
+    
     public int hashCode() {
         final int PRIME = 59;
         int result = 1;
@@ -155,7 +155,7 @@ class EmptyTableRow implements TableRow {
     }
 
     @java.lang.Override
-    @java.lang.SuppressWarnings("all")
+    
     public java.lang.String toString() {
         return "EmptyTableRow(table=" + this.getTable() + ", rowNum=" + this.getRowNum() + ")";
     }

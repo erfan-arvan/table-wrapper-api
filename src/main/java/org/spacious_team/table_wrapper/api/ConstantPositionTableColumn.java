@@ -27,17 +27,17 @@ public class ConstantPositionTableColumn implements TableColumn {
     }
 
     @java.lang.Override
-    @java.lang.SuppressWarnings("all")
+    
     public java.lang.String toString() {
         return "ConstantPositionTableColumn(columnIndex=" + this.columnIndex + ")";
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     private ConstantPositionTableColumn(final int columnIndex) {
         this.columnIndex = columnIndex;
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     public static ConstantPositionTableColumn of(final int columnIndex) {
         return new ConstantPositionTableColumn(columnIndex);
     }

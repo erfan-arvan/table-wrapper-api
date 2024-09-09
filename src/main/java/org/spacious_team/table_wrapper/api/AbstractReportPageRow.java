@@ -37,7 +37,7 @@ public abstract class AbstractReportPageRow implements ReportPageRow {
             return converter.apply(innerIterator.next());
         }
 
-        @java.lang.SuppressWarnings("all")
+        
         public ReportPageRowIterator(final Iterator<T> innerIterator, final Function<T, TableCell> converter) {
             this.innerIterator = innerIterator;
             this.converter = converter;

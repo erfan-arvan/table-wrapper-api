@@ -37,7 +37,7 @@ import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
 public abstract class AbstractTable<R extends ReportPageRow> implements Table {
-    @java.lang.SuppressWarnings("all")
+    
     private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(AbstractTable.class);
     protected final AbstractReportPage<R> reportPage;
     protected final String tableName;
@@ -233,27 +233,27 @@ public abstract class AbstractTable<R extends ReportPageRow> implements Table {
     protected abstract CellDataAccessObject<?, R> getCellDataAccessObject();
 
     @java.lang.Override
-    @java.lang.SuppressWarnings("all")
+    
     public java.lang.String toString() {
         return "AbstractTable(tableName=" + this.tableName + ")";
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     public AbstractReportPage<R> getReportPage() {
         return this.reportPage;
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     public TableCellRange getTableRange() {
         return this.tableRange;
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     public Map<TableColumn, Integer> getHeaderDescription() {
         return this.headerDescription;
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     public boolean isEmpty() {
         return this.empty;
     }
