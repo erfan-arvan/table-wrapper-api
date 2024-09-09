@@ -26,18 +26,18 @@ import java.time.LocalDateTime;
 /**
  * {@link TableRow} subclass can be mutable. Use {@link #clone()} to make copy.
  */
-@SuppressWarnings("unused")
+
 public interface TableRow extends ReportPageRow, Cloneable {
 
     Table getTable();
 
-    @Nullable
+    
     TableCell getCell(TableColumnDescription column);
 
     /**
      * Returns cell's native value
      */
-    @Nullable
+    
     Object getCellValue(TableColumnDescription column);
 
     /**
@@ -78,8 +78,8 @@ public interface TableRow extends ReportPageRow, Cloneable {
     /**
      * @return return cell value or defaultValue if the cell is missing or the type does not match the expected
      */
-    @Nullable
-    default Object getCellValueOrDefault(TableColumnDescription column, @Nullable Object defaultValue) {
+    
+    default Object getCellValueOrDefault(TableColumnDescription column,  Object defaultValue) {
         try {
             return getCellValue(column);
         } catch (Exception e) {
