@@ -6,83 +6,68 @@
 [INFO] --------------------------------[ jar ]---------------------------------
 [INFO] 
 [INFO] --- resources:3.3.1:resources (default-resources) @ table-wrapper-api ---
-[INFO] skip non existing resourceDirectory /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/correct_branches/table-wrapper-api/src/main/resources
+[INFO] skip non existing resourceDirectory /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/resources
 [INFO] 
 [INFO] --- compiler:3.11.0:compile (default-compile) @ table-wrapper-api ---
 [INFO] Changes detected - recompiling the module! :source
 [INFO] Compiling 27 source files with javac [forked debug deprecation target 11] to target/classes
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/correct_branches/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[94,80] [argument] incompatible argument for parameter array of Arrays.stream.
+[WARNING] The following options were not recognized by any processor: '[detailedmsgtex]'
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableRow.java:[82,29] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [default]
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableRow.java:[82,29] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [default]
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/ReportPage.java:[166,29] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [default]
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/ReportPage.java:[166,29] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [default]
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/ReportPage.java:[196,32] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [default]
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/ReportPage.java:[196,32] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [default]
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[34,21] [keyfor:type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[34,21] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[34,21] [nullness:type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[34,21] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[40,21] [keyfor:type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[40,21] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[40,21] [nullness:type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[40,21] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[66,18] [keyfor:type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[66,18] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[66,18] [nullness:type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[66,18] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableFactory.java:[134,70] [nullness:argument] incompatible argument for parameter obj of Objects.requireNonNull.
+  found   : @Initialized @Nullable TableCell
+  required: @Initialized @NonNull TableCell
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableFactory.java:[162,70] [nullness:argument] incompatible argument for parameter obj of Objects.requireNonNull.
+  found   : @Initialized @Nullable TableCell
+  required: @Initialized @NonNull TableCell
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[129,29] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [default]
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[129,29] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [default]
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[89,80] [nullness:argument] incompatible argument for parameter array of Arrays.stream.
   found   : capture#01 extends @Initialized @NonNull TableColumnDescription @Initialized @Nullable []
   required: @Initialized @NonNull TableColumnDescription @Initialized @NonNull []
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/correct_branches/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[153,25] [assignment] incompatible types in assignment.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[144,25] [nullness:assignment] incompatible types in assignment.
   found   : null (NullType)
   required: T extends @UnknownInitialization @NonNull Object
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/correct_branches/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[47,15] [dereference.of.nullable] dereference of possibly-null reference row
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/correct_branches/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[52,15] [dereference.of.nullable] dereference of possibly-null reference row
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/correct_branches/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[57,15] [dereference.of.nullable] dereference of possibly-null reference row
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/correct_branches/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[62,15] [dereference.of.nullable] dereference of possibly-null reference row
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/correct_branches/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[67,15] [dereference.of.nullable] dereference of possibly-null reference row
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/correct_branches/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[72,15] [dereference.of.nullable] dereference of possibly-null reference row
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/correct_branches/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[77,28] [argument] incompatible argument for parameter row of CellDataAccessObject.getValue.
-  found   : T extends @FBCBottom @MonotonicNonNull ReportPageRow
-  required: T extends @Initialized @NonNull ReportPageRow
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/correct_branches/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[81,31] [argument] incompatible argument for parameter row of CellDataAccessObject.getIntValue.
-  found   : T extends @FBCBottom @MonotonicNonNull ReportPageRow
-  required: T extends @Initialized @NonNull ReportPageRow
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/correct_branches/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[85,32] [argument] incompatible argument for parameter row of CellDataAccessObject.getLongValue.
-  found   : T extends @FBCBottom @MonotonicNonNull ReportPageRow
-  required: T extends @Initialized @NonNull ReportPageRow
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/correct_branches/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[89,34] [argument] incompatible argument for parameter row of CellDataAccessObject.getDoubleValue.
-  found   : T extends @FBCBottom @MonotonicNonNull ReportPageRow
-  required: T extends @Initialized @NonNull ReportPageRow
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/correct_branches/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[93,38] [argument] incompatible argument for parameter row of CellDataAccessObject.getBigDecimalValue.
-  found   : T extends @FBCBottom @MonotonicNonNull ReportPageRow
-  required: T extends @Initialized @NonNull ReportPageRow
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/correct_branches/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[97,34] [argument] incompatible argument for parameter row of CellDataAccessObject.getStringValue.
-  found   : T extends @FBCBottom @MonotonicNonNull ReportPageRow
-  required: T extends @Initialized @NonNull ReportPageRow
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/correct_branches/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[101,35] [argument] incompatible argument for parameter row of CellDataAccessObject.getInstantValue.
-  found   : T extends @FBCBottom @MonotonicNonNull ReportPageRow
-  required: T extends @Initialized @NonNull ReportPageRow
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/correct_branches/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[105,41] [argument] incompatible argument for parameter row of CellDataAccessObject.getLocalDateTimeValue.
-  found   : T extends @FBCBottom @MonotonicNonNull ReportPageRow
-  required: T extends @Initialized @NonNull ReportPageRow
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/correct_branches/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[110,60] [assignment] incompatible types in assignment.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[217,20] [keyfor:type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[217,20] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[217,20] [nullness:type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[217,20] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[224,20] [keyfor:type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[224,20] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[224,20] [nullness:type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[224,20] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[230,31] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[230,31] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[40,21] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[40,21] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[46,21] [keyfor:type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[46,21] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[46,21] [nullness:type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[46,21] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[76,18] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[76,18] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[109,60] [nullness:assignment] incompatible types in assignment.
   found   : @Initialized @Nullable Integer
   required: @UnknownInitialization @NonNull Integer
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/correct_branches/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[130,26] [argument] incompatible argument for parameter row of CellDataAccessObject.getCell.
-  found   : R extends @Initialized @Nullable ReportPageRow
-  required: R extends @Initialized @NonNull ReportPageRow
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/correct_branches/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[139,40] [argument] incompatible argument for parameter row of CellDataAccessObject.getCell.
-  found   : R extends @Initialized @Nullable ReportPageRow
-  required: R extends @Initialized @NonNull ReportPageRow
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/correct_branches/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[148,40] [argument] incompatible argument for parameter row of CellDataAccessObject.getCell.
-  found   : R extends @Initialized @Nullable ReportPageRow
-  required: R extends @Initialized @NonNull ReportPageRow
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/correct_branches/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[157,40] [argument] incompatible argument for parameter row of CellDataAccessObject.getCell.
-  found   : R extends @Initialized @Nullable ReportPageRow
-  required: R extends @Initialized @NonNull ReportPageRow
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/correct_branches/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[166,40] [argument] incompatible argument for parameter row of CellDataAccessObject.getCell.
-  found   : R extends @Initialized @Nullable ReportPageRow
-  required: R extends @Initialized @NonNull ReportPageRow
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/correct_branches/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[175,40] [argument] incompatible argument for parameter row of CellDataAccessObject.getCell.
-  found   : R extends @Initialized @Nullable ReportPageRow
-  required: R extends @Initialized @NonNull ReportPageRow
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/correct_branches/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[184,40] [argument] incompatible argument for parameter row of CellDataAccessObject.getCell.
-  found   : R extends @Initialized @Nullable ReportPageRow
-  required: R extends @Initialized @NonNull ReportPageRow
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/correct_branches/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[193,40] [argument] incompatible argument for parameter row of CellDataAccessObject.getCell.
-  found   : R extends @Initialized @Nullable ReportPageRow
-  required: R extends @Initialized @NonNull ReportPageRow
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/correct_branches/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableFactory.java:[134,70] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
-  found   : @Initialized @Nullable TableCell
-  required: @Initialized @NonNull TableCell
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/correct_branches/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableFactory.java:[162,70] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
-  found   : @Initialized @Nullable TableCell
-  required: @Initialized @NonNull TableCell
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  4.500 s
-[INFO] Finished at: 2024-08-29T01:12:21-04:00
+[INFO] Total time:  4.518 s
+[INFO] Finished at: 2024-09-09T15:01:31-04:00
 [INFO] ------------------------------------------------------------------------
