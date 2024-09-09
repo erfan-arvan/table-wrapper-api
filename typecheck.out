@@ -11,24 +11,25 @@
 [INFO] --- compiler:3.11.0:compile (default-compile) @ table-wrapper-api ---
 [INFO] Changes detected - recompiling the module! :source
 [INFO] Compiling 27 source files with javac [forked debug deprecation target 11] to target/classes
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableFactory.java:[134,70] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
+[WARNING] The following options were not recognized by any processor: '[detailedmsgtex]'
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableFactory.java:[134,70] [nullness:argument] incompatible argument for parameter obj of Objects.requireNonNull.
   found   : @Initialized @Nullable TableCell
   required: @Initialized @NonNull TableCell
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableFactory.java:[162,70] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableFactory.java:[162,70] [nullness:argument] incompatible argument for parameter obj of Objects.requireNonNull.
   found   : @Initialized @Nullable TableCell
   required: @Initialized @NonNull TableCell
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[94,80] [argument] incompatible argument for parameter array of Arrays.stream.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[94,80] [nullness:argument] incompatible argument for parameter array of Arrays.stream.
   found   : capture#01 extends @Initialized @NonNull TableColumnDescription @Initialized @Nullable []
   required: @Initialized @NonNull TableColumnDescription @Initialized @NonNull []
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[153,25] [assignment] incompatible types in assignment.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[153,25] [nullness:assignment] incompatible types in assignment.
   found   : null (NullType)
   required: T extends @UnknownInitialization @NonNull Object
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[110,60] [assignment] incompatible types in assignment.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[110,60] [nullness:assignment] incompatible types in assignment.
   found   : @Initialized @Nullable Integer
   required: @UnknownInitialization @NonNull Integer
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  5.004 s
-[INFO] Finished at: 2024-09-08T23:40:46-04:00
+[INFO] Total time:  4.961 s
+[INFO] Finished at: 2024-09-09T14:35:12-04:00
 [INFO] ------------------------------------------------------------------------
