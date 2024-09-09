@@ -11,39 +11,40 @@
 [INFO] --- compiler:3.11.0:compile (default-compile) @ table-wrapper-api ---
 [INFO] Changes detected - recompiling the module! :source
 [INFO] Compiling 28 source files with javac [forked debug target 11] to target/classes
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableFactory.java:[132,50] [dereference.of.nullable] dereference of possibly-null reference reportPage.getCell(tableNameCell)
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableFactory.java:[159,50] [dereference.of.nullable] dereference of possibly-null reference reportPage.getCell(tableNameCell)
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[135,39] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
+[WARNING] The following options were not recognized by any processor: '[detailedmsgtex]'
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableFactory.java:[132,50] [nullness:dereference.of.nullable] dereference of possibly-null reference reportPage.getCell(tableNameCell)
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableFactory.java:[159,50] [nullness:dereference.of.nullable] dereference of possibly-null reference reportPage.getCell(tableNameCell)
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[135,39] [nullness:argument] incompatible argument for parameter obj of Objects.requireNonNull.
   found   : C extends @Initialized @Nullable Object
   required: C extends @Initialized @NonNull Object
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[143,39] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[143,39] [nullness:argument] incompatible argument for parameter obj of Objects.requireNonNull.
   found   : C extends @Initialized @Nullable Object
   required: C extends @Initialized @NonNull Object
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[151,39] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[151,39] [nullness:argument] incompatible argument for parameter obj of Objects.requireNonNull.
   found   : C extends @Initialized @Nullable Object
   required: C extends @Initialized @NonNull Object
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[159,39] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[159,39] [nullness:argument] incompatible argument for parameter obj of Objects.requireNonNull.
   found   : C extends @Initialized @Nullable Object
   required: C extends @Initialized @NonNull Object
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[167,39] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[167,39] [nullness:argument] incompatible argument for parameter obj of Objects.requireNonNull.
   found   : C extends @Initialized @Nullable Object
   required: C extends @Initialized @NonNull Object
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[175,39] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[175,39] [nullness:argument] incompatible argument for parameter obj of Objects.requireNonNull.
   found   : C extends @Initialized @Nullable Object
   required: C extends @Initialized @NonNull Object
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[183,39] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[183,39] [nullness:argument] incompatible argument for parameter obj of Objects.requireNonNull.
   found   : C extends @Initialized @Nullable Object
   required: C extends @Initialized @NonNull Object
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[89,80] [argument] incompatible argument for parameter array of Arrays.stream.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[89,80] [nullness:argument] incompatible argument for parameter array of Arrays.stream.
   found   : capture#01 extends @Initialized @NonNull TableColumnDescription @Initialized @Nullable []
   required: @Initialized @NonNull TableColumnDescription @Initialized @NonNull []
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[39,35] [unboxing.of.nullable] unboxing a possibly-null reference getCellIndex(column)
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[190,19] [assignment] incompatible types in assignment.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[39,35] [nullness:unboxing.of.nullable] unboxing a possibly-null reference getCellIndex(column)
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[190,19] [nullness:assignment] incompatible types in assignment.
   found   : T extends @Initialized @NonNull ReportPageRow
   required: T extends @FBCBottom @MonotonicNonNull ReportPageRow
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  4.389 s
-[INFO] Finished at: 2024-09-09T02:16:31-04:00
+[INFO] Total time:  4.869 s
+[INFO] Finished at: 2024-09-09T14:31:41-04:00
 [INFO] ------------------------------------------------------------------------
