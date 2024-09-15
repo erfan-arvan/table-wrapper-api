@@ -17,15 +17,20 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 package org.spacious_team.table_wrapper.api;
-
+import javax.annotation.Nullable;
 /**
  * Zero-based table cell range
  */
 public class TableCellRange {
+
     public static final TableCellRange EMPTY_RANGE = new EmptyTableCellRange();
+
     private final int firstRow;
+
     private final int lastRow;
+
     private final int firstColumn;
+
     private final int lastColumn;
 
     public boolean contains(TableCellAddress address) {
@@ -59,7 +64,6 @@ public class TableCellRange {
      * Adds columns without range check. First column index of range may become negative.
      * @param number positive or negative values
      */
-    
     public TableCellRange addColumnsToLeft(int number) {
         return new TableCellRange(firstRow, lastRow, firstColumn - number, lastColumn);
     }
@@ -67,39 +71,38 @@ public class TableCellRange {
     /**
      * @param number positive or negative values
      */
-    
     public TableCellRange addColumnsToRight(int number) {
         return new TableCellRange(firstRow, lastRow, firstColumn, lastColumn + number);
     }
 
-
     private static class EmptyTableCellRange extends TableCellRange {
+
         private EmptyTableCellRange() {
             super(0, 0, 0, 0);
         }
 
         @Override
-        public boolean contains(TableCellAddress address) {
+        public boolean contains(@Nullable TableCellAddress address) {
             return false;
         }
 
         @Override
-        public boolean containsRow(int row) {
+        public boolean containsRow(@Nullable int row) {
             return false;
         }
 
         @Override
-        public boolean containsColumn(int column) {
+        public boolean containsColumn(@Nullable int column) {
             return false;
         }
 
         @Override
-        public TableCellRange addRowsToTop(int number) {
+        public TableCellRange addRowsToTop(@Nullable int number) {
             return this;
         }
 
         @Override
-        public TableCellRange addRowsToBottom(int number) {
+        public TableCellRange addRowsToBottom(@Nullable int number) {
             return this;
         }
 
@@ -137,14 +140,21 @@ public class TableCellRange {
     @java.lang.Override
     @java.lang.SuppressWarnings("all")
     public boolean equals(final java.lang.Object o) {
-        if (o == this) return true;
-        if (!(o instanceof TableCellRange)) return false;
+        if (o == this)
+            return true;
+        if (!(o instanceof TableCellRange))
+            return false;
         final TableCellRange other = (TableCellRange) o;
-        if (!other.canEqual((java.lang.Object) this)) return false;
-        if (this.getFirstRow() != other.getFirstRow()) return false;
-        if (this.getLastRow() != other.getLastRow()) return false;
-        if (this.getFirstColumn() != other.getFirstColumn()) return false;
-        if (this.getLastColumn() != other.getLastColumn()) return false;
+        if (!other.canEqual((java.lang.Object) this))
+            return false;
+        if (this.getFirstRow() != other.getFirstRow())
+            return false;
+        if (this.getLastRow() != other.getLastRow())
+            return false;
+        if (this.getFirstColumn() != other.getFirstColumn())
+            return false;
+        if (this.getLastColumn() != other.getLastColumn())
+            return false;
         return true;
     }
 

@@ -17,10 +17,7 @@
  */
 
 package org.spacious_team.table_wrapper.api;
-
-import java.util.function.Predicate;
-
-class ReportPageHelper {
+import javax.annotation.Nullable;class ReportPageHelper {
 
     static Predicate<Object> getCellStringValueIgnoreCasePrefixPredicate(String prefix) {
         String lowercasePrefix = prefix.trim().toLowerCase();

@@ -17,14 +17,16 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 package org.spacious_team.table_wrapper.api;
-
+import javax.annotation.Nullable;
 import java.util.Iterator;
 import java.util.function.Function;
 
 public abstract class AbstractReportPageRow implements ReportPageRow {
 
     protected static class ReportPageRowIterator<T> implements Iterator<TableCell> {
+
         private final Iterator<T> innerIterator;
+
         private final Function<T, TableCell> converter;
 
         @Override

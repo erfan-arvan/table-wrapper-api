@@ -17,11 +17,7 @@
  */
 
 package org.spacious_team.table_wrapper.api;
-
-import javax.annotation.Nullable;
-import java.math.BigDecimal;
-import java.time.Instant;
-import java.time.LocalDateTime;
+import javax.annotation.Nullable;import java.time.LocalDateTime;
 
 /**
  * {@link TableRow} subclass can be mutable. Use {@link #clone()} to make copy.

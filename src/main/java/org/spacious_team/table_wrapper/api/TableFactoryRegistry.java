@@ -15,9 +15,8 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-
 package org.spacious_team.table_wrapper.api;
-
+import javax.annotation.Nullable;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
@@ -30,7 +29,6 @@ public class TableFactoryRegistry {
         factories.add(tableFactory);
     }
 
-    
     public static Collection<TableFactory> getAll() {
         return Collections.unmodifiableCollection(factories);
     }

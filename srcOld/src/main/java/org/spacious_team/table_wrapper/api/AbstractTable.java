@@ -17,12 +17,8 @@
  */
 
 package org.spacious_team.table_wrapper.api;
+import javax.annotation.Nullable;import lombok.extern.slf4j.Slf4j;
 
-import lombok.Getter;
-import lombok.ToString;
-import lombok.extern.slf4j.Slf4j;
-
-import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;

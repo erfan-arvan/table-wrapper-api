@@ -15,16 +15,14 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-
 package org.spacious_team.table_wrapper.api;
-
+import javax.annotation.Nullable;
 import java.util.function.Predicate;
 
 class ReportPageHelper {
 
     static Predicate<Object> getCellStringValueIgnoreCasePrefixPredicate(String prefix) {
         String lowercasePrefix = prefix.trim().toLowerCase();
-        return (cell) -> (cell instanceof String) &&
-                ((String) cell).trim().toLowerCase().startsWith(lowercasePrefix);
+        return (cell) -> (cell instanceof String) && ((String) cell).trim().toLowerCase().startsWith(lowercasePrefix);
     }
 }

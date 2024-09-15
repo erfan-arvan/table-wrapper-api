@@ -38,7 +38,7 @@ public class ConstantPositionTableColumn implements TableColumn {
         this.columnIndex = columnIndex;
     }
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
     public static ConstantPositionTableColumn of(final int columnIndex) {
         return new ConstantPositionTableColumn(columnIndex);
     }

@@ -188,7 +188,7 @@ public abstract class AbstractTable<R extends ReportPageRow> implements Table {
      * For performance issue same object with changed state is provided in each loop cycle.
      * Call {@link TableRow#clone()} if you want to use row object outside iterator() block.
      */
-    @org.checkerframework.dataflow.qual.Impure
+    @org.checkerframework.dataflow.qual.Pure
     public  Iterator<TableRow> iterator( AbstractTable<R> this) {
         return new TableIterator();
     }

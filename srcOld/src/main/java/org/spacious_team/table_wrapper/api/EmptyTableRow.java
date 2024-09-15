@@ -17,11 +17,7 @@
  */
 
 package org.spacious_team.table_wrapper.api;
-
-import lombok.Data;
-import javax.annotation.Nullable;
-
-import java.math.BigDecimal;
+import javax.annotation.Nullable;import java.math.BigDecimal;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.util.Iterator;

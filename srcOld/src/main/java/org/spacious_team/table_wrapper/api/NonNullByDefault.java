@@ -17,10 +17,7 @@
  */
 
 package org.spacious_team.table_wrapper.api;
-
-import javax.annotation.Nonnull;
-import javax.annotation.meta.TypeQualifierDefault;
-import java.lang.annotation.Documented;
+import javax.annotation.Nullable;import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

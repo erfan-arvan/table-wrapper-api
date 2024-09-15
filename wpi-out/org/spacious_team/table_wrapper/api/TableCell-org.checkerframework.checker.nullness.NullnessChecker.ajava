@@ -37,31 +37,31 @@ public interface TableCell {
     /**
      * @throws RuntimeException if can't extract int value
      */
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
      @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull int getIntValue();
 
     /**
      * @throws RuntimeException if can't extract long value
      */
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
      @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull long getLongValue();
 
     /**
      * @throws RuntimeException if can't extract Double value
      */
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
     @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Double getDoubleValue();
 
     /**
      * @throws RuntimeException if can't extract BigDecimal value
      */
-    @org.checkerframework.dataflow.qual.Impure
+    @org.checkerframework.dataflow.qual.Pure
     @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull BigDecimal getBigDecimalValue();
 
     /**
      * @throws RuntimeException if can't extract string value
      */
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
     @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String getStringValue();
 
     /**
@@ -127,7 +127,7 @@ public interface TableCell {
     /**
      * @return return cell value or defaultValue if the cell is missing or the type does not match the expected
      */
-    @org.checkerframework.dataflow.qual.Impure
+    @org.checkerframework.dataflow.qual.SideEffectFree
     default @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull BigDecimal getBigDecimalValueOrDefault(BigDecimal defaultValue) {
         try {
             return getBigDecimalValue();

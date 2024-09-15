@@ -18,3 +18,4 @@
 
 @NonNullByDefault
 package org.spacious_team.table_wrapper.api;
+import javax.annotation.Nullable;

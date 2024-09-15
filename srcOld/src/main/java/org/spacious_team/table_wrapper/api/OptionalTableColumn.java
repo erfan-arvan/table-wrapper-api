@@ -17,10 +17,7 @@
  */
 
 package org.spacious_team.table_wrapper.api;
-
-@SuppressWarnings("unused")
-public class OptionalTableColumn implements TableColumn {
-
+import javax.annotation.Nullable;
     public static TableColumn of(TableColumn column) {
         return AnyOfTableColumn.of(column, TableColumn.NOCOLUMN);
     }

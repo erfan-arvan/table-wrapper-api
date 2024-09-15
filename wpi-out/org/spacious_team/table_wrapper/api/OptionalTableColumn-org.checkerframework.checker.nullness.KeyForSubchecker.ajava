@@ -20,7 +20,7 @@ package org.spacious_team.table_wrapper.api;
 @org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.KeyForSubchecker")
 public class OptionalTableColumn implements TableColumn {
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
     public static  TableColumn of(TableColumn column) {
         return AnyOfTableColumn.of(column, TableColumn.NOCOLUMN);
     }

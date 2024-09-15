@@ -17,10 +17,7 @@
  */
 
 package org.spacious_team.table_wrapper.api;
-
-import lombok.RequiredArgsConstructor;
-import lombok.ToString;
-
+import javax.annotation.Nullable;
 @ToString
 @RequiredArgsConstructor(staticName = "of")
 public class ConstantPositionTableColumn implements TableColumn {

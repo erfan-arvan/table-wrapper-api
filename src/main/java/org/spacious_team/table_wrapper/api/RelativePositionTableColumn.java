@@ -17,9 +17,11 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 package org.spacious_team.table_wrapper.api;
-
+import javax.annotation.Nullable;
 public class RelativePositionTableColumn implements TableColumn {
+
     private final TableColumn relatedTableColumn;
+
     private final int relatedOffset;
 
     @Override

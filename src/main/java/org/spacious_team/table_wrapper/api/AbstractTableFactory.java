@@ -17,12 +17,13 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 package org.spacious_team.table_wrapper.api;
-
+import javax.annotation.Nullable;
 /**
  * {@link TableFactory} factory with specified {@link ReportPage}
  * @param <T> the factory supported {@link ReportPage} type and subtypes
  */
 public abstract class AbstractTableFactory<T extends ReportPage> implements TableFactory {
+
     private final Class<T> reportPageType;
 
     @Override
@@ -33,7 +34,6 @@ public abstract class AbstractTableFactory<T extends ReportPage> implements Tabl
     /**
      * Safe cast operation if {@link #canHandle(ReportPage)} is true
      */
-    
     protected T cast(ReportPage reportPage) {
         return (T) reportPage;
     }

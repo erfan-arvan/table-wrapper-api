@@ -17,10 +17,7 @@
  */
 
 package org.spacious_team.table_wrapper.api;
-
-import java.util.function.Predicate;
-
-public interface TableFactory {
+import javax.annotation.Nullable;public interface TableFactory {
 
     boolean canHandle(ReportPage reportPage);
 

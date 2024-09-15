@@ -17,11 +17,7 @@
  */
 
 package org.spacious_team.table_wrapper.api;
-
-import javax.annotation.Nullable;
-
-/**
- * {@link ReportPage} with specified {@link ReportPageRow}
+import javax.annotation.Nullable; * {@link ReportPage} with specified {@link ReportPageRow}
  */
 public abstract class AbstractReportPage<T extends ReportPageRow> implements ReportPage {
 

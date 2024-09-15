@@ -15,14 +15,11 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-
 package org.spacious_team.table_wrapper.api;
-
 import javax.annotation.Nullable;
 import java.math.BigDecimal;
 import java.time.Instant;
 import java.time.LocalDateTime;
-
 
 public interface TableCell {
 
@@ -31,7 +28,6 @@ public interface TableCell {
      */
     int getColumnIndex();
 
-    
     Object getValue();
 
     /**
@@ -72,8 +68,7 @@ public interface TableCell {
     /**
      * @return return cell value or defaultValue if the cell is missing or the type does not match the expected
      */
-    
-    default Object getValueOrDefault( Object defaultValue) {
+    default Object getValueOrDefault(Object defaultValue) {
         try {
             return getValue();
         } catch (Exception e) {

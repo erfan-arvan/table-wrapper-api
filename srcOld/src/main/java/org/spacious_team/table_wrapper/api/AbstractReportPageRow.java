@@ -17,10 +17,7 @@
  */
 
 package org.spacious_team.table_wrapper.api;
-
-import lombok.RequiredArgsConstructor;
-
-import java.util.Iterator;
+import javax.annotation.Nullable;import java.util.Iterator;
 import java.util.function.Function;
 
 public abstract class AbstractReportPageRow implements ReportPageRow {

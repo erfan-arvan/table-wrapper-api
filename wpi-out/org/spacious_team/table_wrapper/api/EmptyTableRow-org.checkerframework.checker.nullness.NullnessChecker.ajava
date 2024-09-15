@@ -57,7 +57,7 @@ class EmptyTableRow implements TableRow {
         return false;
     }
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
     public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Iterator<TableCell> iterator(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull EmptyTableRow this) {
         return emptyIterator();
     }

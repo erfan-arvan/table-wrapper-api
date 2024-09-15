@@ -15,9 +15,7 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-
 package org.spacious_team.table_wrapper.api;
-
 import javax.annotation.Nullable;
 import java.math.BigDecimal;
 import java.time.Instant;
@@ -26,60 +24,56 @@ import java.time.LocalDateTime;
 /**
  * {@link TableRow} subclass can be mutable. Use {@link #clone()} to make copy.
  */
-
 public interface TableRow extends ReportPageRow, Cloneable {
 
     Table getTable();
 
-    
-    TableCell getCell(TableColumnDescription column);
+    TableCell getCell(@Nullable TableColumnDescription column);
 
     /**
      * Returns cell's native value
      */
-    
-    Object getCellValue(TableColumnDescription column);
+    Object getCellValue(@Nullable TableColumnDescription column);
 
     /**
      * @throws RuntimeException if method can't extract int value
      */
-    int getIntCellValue(TableColumnDescription column);
+    int getIntCellValue(@Nullable TableColumnDescription column);
 
     /**
      * @throws RuntimeException if method can't extract long value
      */
-    long getLongCellValue(TableColumnDescription column);
+    long getLongCellValue(@Nullable TableColumnDescription column);
 
     /**
      * @throws RuntimeException if method can't extract Double value
      */
-    double getDoubleCellValue(TableColumnDescription column);
+    double getDoubleCellValue(@Nullable TableColumnDescription column);
 
     /**
      * @throws RuntimeException if method can't extract BigDecimal value
      */
-    BigDecimal getBigDecimalCellValue(TableColumnDescription column);
+    BigDecimal getBigDecimalCellValue(@Nullable TableColumnDescription column);
 
     /**
      * @throws RuntimeException if method can't extract string value
      */
-    String getStringCellValue(TableColumnDescription column);
+    String getStringCellValue(@Nullable TableColumnDescription column);
 
     /**
      * @throws RuntimeException if method can't extract instant value
      */
-    Instant getInstantCellValue(TableColumnDescription column);
+    Instant getInstantCellValue(@Nullable TableColumnDescription column);
 
     /**
      * @throws RuntimeException if method can't extract local date time value
      */
-    LocalDateTime getLocalDateTimeCellValue(TableColumnDescription column);
+    LocalDateTime getLocalDateTimeCellValue(@Nullable TableColumnDescription column);
 
     /**
      * @return return cell value or defaultValue if the cell is missing or the type does not match the expected
      */
-    
-    default Object getCellValueOrDefault(TableColumnDescription column,  Object defaultValue) {
+    default Object getCellValueOrDefault(TableColumnDescription column, Object defaultValue) {
         try {
             return getCellValue(column);
         } catch (Exception e) {

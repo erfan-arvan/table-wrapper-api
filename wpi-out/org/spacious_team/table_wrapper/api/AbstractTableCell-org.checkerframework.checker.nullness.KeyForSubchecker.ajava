@@ -35,27 +35,27 @@ public abstract class AbstractTableCell<T> implements TableCell {
         return dao.getValue(cell);
     }
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
     public   int getIntValue( AbstractTableCell<T> this) {
         return dao.getIntValue(cell);
     }
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
     public   long getLongValue( AbstractTableCell<T> this) {
         return dao.getLongValue(cell);
     }
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
     public  Double getDoubleValue( AbstractTableCell<T> this) {
         return dao.getDoubleValue(cell);
     }
 
-    @org.checkerframework.dataflow.qual.Impure
+    @org.checkerframework.dataflow.qual.Pure
     public  BigDecimal getBigDecimalValue( AbstractTableCell<T> this) {
         return dao.getBigDecimalValue(cell);
     }
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
     public  String getStringValue( AbstractTableCell<T> this) {
         return dao.getStringValue(cell);
     }

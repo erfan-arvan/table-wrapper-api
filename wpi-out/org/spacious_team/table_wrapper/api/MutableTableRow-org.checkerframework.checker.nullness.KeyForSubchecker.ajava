@@ -79,32 +79,32 @@ class MutableTableRow<T extends ReportPageRow> implements TableRow {
         return dao.getValue(row, getCellIndex(column));
     }
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
     public   int getIntCellValue( MutableTableRow<T> this,  TableColumnDescription column) {
         return dao.getIntValue(row, getCellIndex(column));
     }
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
     public   long getLongCellValue( MutableTableRow<T> this,  TableColumnDescription column) {
         return dao.getLongValue(row, getCellIndex(column));
     }
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
     public   double getDoubleCellValue( MutableTableRow<T> this,  TableColumnDescription column) {
         return dao.getDoubleValue(row, getCellIndex(column));
     }
 
-    @org.checkerframework.dataflow.qual.Impure
+    @org.checkerframework.dataflow.qual.Pure
     public  BigDecimal getBigDecimalCellValue( MutableTableRow<T> this,  TableColumnDescription column) {
         return dao.getBigDecimalValue(row, getCellIndex(column));
     }
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
     public  String getStringCellValue( MutableTableRow<T> this,  TableColumnDescription column) {
         return dao.getStringValue(row, getCellIndex(column));
     }
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
     public  Instant getInstantCellValue( MutableTableRow<T> this,  TableColumnDescription column) {
         return dao.getInstantValue(row, getCellIndex(column));
     }

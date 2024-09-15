@@ -17,11 +17,7 @@
  */
 
 package org.spacious_team.table_wrapper.api;
-
-import javax.annotation.Nullable;
-import java.util.function.Predicate;
-
-import static java.util.Objects.requireNonNull;
+import javax.annotation.Nullable;import static java.util.Objects.requireNonNull;
 import static org.spacious_team.table_wrapper.api.ReportPageHelper.getCellStringValueIgnoreCasePrefixPredicate;
 
 @SuppressWarnings("unused")

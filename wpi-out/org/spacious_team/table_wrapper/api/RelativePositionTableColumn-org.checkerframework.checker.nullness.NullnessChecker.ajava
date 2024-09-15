@@ -41,7 +41,7 @@ public class RelativePositionTableColumn implements TableColumn {
         this.relatedOffset = relatedOffset;
     }
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
     public static RelativePositionTableColumn of(final TableColumn relatedTableColumn, final int relatedOffset) {
         return new RelativePositionTableColumn(relatedTableColumn, relatedOffset);
     }

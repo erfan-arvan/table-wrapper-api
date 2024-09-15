@@ -17,7 +17,6 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 package org.spacious_team.table_wrapper.api;
-
 import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -37,13 +36,20 @@ import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
 public abstract class AbstractTable<R extends ReportPageRow> implements Table {
+
     @java.lang.SuppressWarnings("all")
     private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(AbstractTable.class);
+
     protected final AbstractReportPage<R> reportPage;
+
     protected final String tableName;
+
     private final TableCellRange tableRange;
+
     private final Map<TableColumn, Integer> headerDescription;
+
     private final boolean empty;
+
     /**
      * Offset of first data row. First table row is a header.
      */
@@ -52,17 +58,16 @@ public abstract class AbstractTable<R extends ReportPageRow> implements Table {
     /**
      * @param tableRange only first and last row numbers matters
      */
-    
     protected AbstractTable(AbstractReportPage<R> reportPage, String tableName, TableCellRange tableRange, Class<? extends TableColumnDescription> headerDescription, int headersRowCount) {
         this.reportPage = reportPage;
         this.tableName = tableName;
-        this.dataRowOffset = 1 + headersRowCount; // table_name + headersRowCount
+        // table_name + headersRowCount
+        this.dataRowOffset = 1 + headersRowCount;
         this.empty = isEmpty(tableRange, dataRowOffset);
         this.headerDescription = this.empty ? Collections.emptyMap() : getHeaderDescription(reportPage, tableRange, headerDescription, headersRowCount);
         this.tableRange = empty ? tableRange : new TableCellRange(tableRange.getFirstRow(), tableRange.getLastRow(), getColumnIndices(this.headerDescription).min().orElse(tableRange.getFirstColumn()), getColumnIndices(this.headerDescription).max().orElse(tableRange.getLastColumn()));
     }
 
-    
     protected AbstractTable(AbstractTable<R> table, int appendDataRowsToTop, int appendDataRowsToBottom) {
         this.reportPage = table.reportPage;
         this.tableName = table.tableName;
@@ -176,10 +181,12 @@ public abstract class AbstractTable<R extends ReportPageRow> implements Table {
         return new TableIterator();
     }
 
-
     protected class TableIterator implements Iterator<TableRow> {
+
         private final MutableTableRow<R> tableRow = new MutableTableRow<>(AbstractTable.this, getCellDataAccessObject());
+
         private final int numberOfRows = getNumberOfTableRows(tableRange);
+
         private int i = dataRowOffset;
 
         @Override
@@ -221,6 +228,7 @@ public abstract class AbstractTable<R extends ReportPageRow> implements Table {
         return getMutableTableRow(address);
     }
 
+    @Nullable
     private MutableTableRow<R> getMutableTableRow(TableCellAddress address) {
         if (tableRange.contains(address)) {
             MutableTableRow<R> tableRow = new MutableTableRow<>(this, getCellDataAccessObject());

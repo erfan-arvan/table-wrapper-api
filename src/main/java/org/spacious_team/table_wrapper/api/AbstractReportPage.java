@@ -15,9 +15,7 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-
 package org.spacious_team.table_wrapper.api;
-
 import javax.annotation.Nullable;
 
 /**
@@ -25,8 +23,6 @@ import javax.annotation.Nullable;
  */
 public abstract class AbstractReportPage<T extends ReportPageRow> implements ReportPage {
 
-    
     @Override
-    public abstract T getRow(int i);
-
+    public abstract T getRow(@Nullable int i);
 }

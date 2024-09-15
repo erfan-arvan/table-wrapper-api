@@ -17,10 +17,7 @@
  */
 
 package org.spacious_team.table_wrapper.api;
-
-
-import lombok.RequiredArgsConstructor;
-import lombok.ToString;
+import javax.annotation.Nullable;import lombok.ToString;
 
 @ToString
 @RequiredArgsConstructor(staticName = "of")

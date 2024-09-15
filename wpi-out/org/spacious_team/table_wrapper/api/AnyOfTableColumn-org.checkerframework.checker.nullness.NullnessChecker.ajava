@@ -25,7 +25,7 @@ public class AnyOfTableColumn implements TableColumn {
 
     private final TableColumn[] columns;
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
     public static @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull TableColumn of(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull TableColumn@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ... columns) {
         return new AnyOfTableColumn(columns);
     }
@@ -41,7 +41,7 @@ public class AnyOfTableColumn implements TableColumn {
         throw new RuntimeException("Не обнаружен заголовок таблицы, включающий: " + String.join(", ", Arrays.stream(columns).map(TableColumn::toString).toArray(String[]::new)));
     }
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
     public java.lang.String toString() {
         return "AnyOfTableColumn(columns=" + java.util.Arrays.deepToString(this.columns) + ")";
     }

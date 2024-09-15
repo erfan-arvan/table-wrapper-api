@@ -15,9 +15,7 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-
 package org.spacious_team.table_wrapper.api;
-
 import javax.annotation.Nullable;
 import java.math.BigDecimal;
 import java.time.Instant;
@@ -25,7 +23,6 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Objects;
 import java.util.regex.Pattern;
-
 import static java.util.Objects.requireNonNull;
 
 /**
@@ -35,14 +32,14 @@ import static java.util.Objects.requireNonNull;
 public interface CellDataAccessObject<C, R extends ReportPageRow> {
 
     ZoneId defaultZoneId = ZoneId.systemDefault();
+
     Pattern spacePattern = Pattern.compile("\\s");
+
     String NO_CELL_VALUE_EXCEPTION_MESSAGE = "Cell doesn't contains value";
 
-    
-    C getCell(R row, Integer cellIndex);
+    C getCell(@Nullable R row, @Nullable Integer cellIndex);
 
-    
-    Object getValue(C cell);
+    Object getValue(@Nullable C cell);
 
     /**
      * @throws RuntimeException if method can't extract int value
@@ -55,7 +52,7 @@ public interface CellDataAccessObject<C, R extends ReportPageRow> {
      * @throws RuntimeException if method can't extract long value
      */
     default long getLongValue(C cell) {
-         Object value = getValue(cell);
+        Object value = getValue(cell);
         if (value instanceof Number) {
             return ((Number) value).longValue();
         } else if (value != null) {
@@ -69,7 +66,7 @@ public interface CellDataAccessObject<C, R extends ReportPageRow> {
      * @throws RuntimeException if method can't extract Double value
      */
     default double getDoubleValue(C cell) {
-         Object value = getValue(cell);
+        Object value = getValue(cell);
         if (value instanceof Number) {
             return ((Number) value).doubleValue();
         } else if (value != null) {
@@ -97,8 +94,7 @@ public interface CellDataAccessObject<C, R extends ReportPageRow> {
     default BigDecimal getBigDecimalValue(C cell) {
         String number = getStringValue(cell);
         number = number.replace(',', '.');
-        return (Objects.equals(number, "0") || Objects.equals(number, "0.0")) ?
-                BigDecimal.ZERO : new BigDecimal(number);
+        return (Objects.equals(number, "0") || Objects.equals(number, "0.0")) ? BigDecimal.ZERO : new BigDecimal(number);
     }
 
     /**
@@ -111,20 +107,18 @@ public interface CellDataAccessObject<C, R extends ReportPageRow> {
     /**
      * @throws RuntimeException if method can't extract instant value
      */
-    Instant getInstantValue(C cell);
+    Instant getInstantValue(@Nullable C cell);
 
     /**
      * @throws RuntimeException if method can't extract local date time value
      */
     default LocalDateTime getLocalDateTimeValue(C cell) {
-        return getInstantValue(cell)
-                .atZone(defaultZoneId)
-                .toLocalDateTime();
+        return getInstantValue(cell).atZone(defaultZoneId).toLocalDateTime();
     }
 
-    
+    @Nullable
     default Object getValue(R row, Integer cellIndex) {
-         C cell = getCell(row, cellIndex);
+        C cell = getCell(row, cellIndex);
         return (cell == null) ? null : getValue(cell);
     }
 

@@ -17,10 +17,7 @@
  */
 
 package org.spacious_team.table_wrapper.api;
-
-import lombok.AccessLevel;
-import lombok.RequiredArgsConstructor;
-
+import javax.annotation.Nullable;
 /**
  * {@link TableFactory} factory with specified {@link ReportPage}
  * @param <T> the factory supported {@link ReportPage} type and subtypes

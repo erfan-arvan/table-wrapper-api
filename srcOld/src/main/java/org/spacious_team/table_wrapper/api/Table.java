@@ -17,11 +17,7 @@
  */
 
 package org.spacious_team.table_wrapper.api;
-
-import javax.annotation.Nullable;
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
+import javax.annotation.Nullable;import java.util.Map;
 import java.util.function.BiFunction;
 import java.util.function.BiPredicate;
 import java.util.function.Function;

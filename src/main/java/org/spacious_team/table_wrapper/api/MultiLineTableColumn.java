@@ -17,7 +17,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 package org.spacious_team.table_wrapper.api;
-
+import javax.annotation.Nullable;
 import java.util.Arrays;
 
 /**
@@ -30,6 +30,7 @@ import java.util.Arrays;
  * Can find index for (Two -> a3 -> b1) column
  */
 public class MultiLineTableColumn implements TableColumn {
+
     private final TableColumn[] rowDescriptors;
 
     /**

@@ -37,7 +37,7 @@ public class MultiLineTableColumn implements TableColumn {
     /**
      * @param rowDescriptors each array element describes next rows column
      */
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
     public static  MultiLineTableColumn of(TableColumn... rowDescriptors) {
         return new MultiLineTableColumn(rowDescriptors);
     }
@@ -64,7 +64,7 @@ public class MultiLineTableColumn implements TableColumn {
         return columnIndex;
     }
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
     public java.lang.String toString() {
         return "MultiLineTableColumn(rowDescriptors=" + java.util.Arrays.deepToString(this.rowDescriptors) + ")";
     }

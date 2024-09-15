@@ -15,9 +15,8 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-
 package org.spacious_team.table_wrapper.api;
-
+import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 import javax.annotation.meta.TypeQualifierDefault;
 import java.lang.annotation.Documented;
@@ -36,16 +35,7 @@ import java.lang.annotation.RetentionPolicy;
  * <a href="https://youtrack.jetbrains.com/issue/IDEA-125281">implementation</a>
  */
 @Documented
-
-@TypeQualifierDefault({
-        ElementType.ANNOTATION_TYPE,
-        ElementType.CONSTRUCTOR,
-        ElementType.FIELD,
-        ElementType.LOCAL_VARIABLE,
-        ElementType.METHOD,
-        ElementType.PACKAGE,
-        ElementType.PARAMETER,
-        ElementType.TYPE})
+@TypeQualifierDefault({ ElementType.ANNOTATION_TYPE, ElementType.CONSTRUCTOR, ElementType.FIELD, ElementType.LOCAL_VARIABLE, ElementType.METHOD, ElementType.PACKAGE, ElementType.PARAMETER, ElementType.TYPE })
 @Retention(RetentionPolicy.RUNTIME)
 public @interface NonNullByDefault {
 }

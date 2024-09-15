@@ -17,11 +17,11 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 package org.spacious_team.table_wrapper.api;
-
 import javax.annotation.Nullable;
 import java.util.Arrays;
 
 public class TableColumnImpl implements TableColumn {
+
     private final String[] words;
 
     public static TableColumn of(String... words) {
@@ -37,8 +37,7 @@ public class TableColumnImpl implements TableColumn {
 
     public int getColumnIndex(int firstColumnForSearch, ReportPageRow... headerRows) {
         for (ReportPageRow header : headerRows) {
-            next_cell:
-            for (TableCell cell : header) {
+            next_cell: for (TableCell cell : header) {
                 Object value;
                 if (cell != null && cell.getColumnIndex() >= firstColumnForSearch && ((value = cell.getValue()) instanceof String)) {
                     String colName = value.toString().toLowerCase();
@@ -67,11 +66,15 @@ public class TableColumnImpl implements TableColumn {
     @java.lang.Override
     @java.lang.SuppressWarnings("all")
     public boolean equals(final java.lang.Object o) {
-        if (o == this) return true;
-        if (!(o instanceof TableColumnImpl)) return false;
+        if (o == this)
+            return true;
+        if (!(o instanceof TableColumnImpl))
+            return false;
         final TableColumnImpl other = (TableColumnImpl) o;
-        if (!other.canEqual((java.lang.Object) this)) return false;
-        if (!java.util.Arrays.deepEquals(this.words, other.words)) return false;
+        if (!other.canEqual((java.lang.Object) this))
+            return false;
+        if (!java.util.Arrays.deepEquals(this.words, other.words))
+            return false;
         return true;
     }
 

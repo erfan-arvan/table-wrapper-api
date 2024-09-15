@@ -17,7 +17,6 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 package org.spacious_team.table_wrapper.api;
-
 import javax.annotation.Nullable;
 import java.math.BigDecimal;
 import java.time.Instant;
@@ -31,8 +30,11 @@ import java.util.Iterator;
  * will continue to work.
  */
 class MutableTableRow<T extends ReportPageRow> implements TableRow {
+
     private final Table table;
+
     private final CellDataAccessObject<?, T> dao;
+
     private volatile T row;
 
     public TableCell getCell(TableColumnDescription column) {
@@ -111,7 +113,6 @@ class MutableTableRow<T extends ReportPageRow> implements TableRow {
      * Cloned  object is safe use everywhere, this object should be used oly inside of one iteration
      * of {@link Table#iterator()} or {@link Table#stream()}
      */
-    
     public MutableTableRow<T> clone() {
         try {
             return (MutableTableRow<T>) super.clone();
@@ -144,19 +145,25 @@ class MutableTableRow<T extends ReportPageRow> implements TableRow {
     @java.lang.Override
     @java.lang.SuppressWarnings("all")
     public boolean equals(final java.lang.Object o) {
-        if (o == this) return true;
-        if (!(o instanceof MutableTableRow)) return false;
+        if (o == this)
+            return true;
+        if (!(o instanceof MutableTableRow))
+            return false;
         final MutableTableRow<?> other = (MutableTableRow<?>) o;
-        if (!other.canEqual((java.lang.Object) this)) return false;
+        if (!other.canEqual((java.lang.Object) this))
+            return false;
         final java.lang.Object this$table = this.getTable();
         final java.lang.Object other$table = other.getTable();
-        if (this$table == null ? other$table != null : !this$table.equals(other$table)) return false;
+        if (this$table == null ? other$table != null : !this$table.equals(other$table))
+            return false;
         final java.lang.Object this$dao = this.getDao();
         final java.lang.Object other$dao = other.getDao();
-        if (this$dao == null ? other$dao != null : !this$dao.equals(other$dao)) return false;
+        if (this$dao == null ? other$dao != null : !this$dao.equals(other$dao))
+            return false;
         final java.lang.Object this$row = this.getRow();
         final java.lang.Object other$row = other.getRow();
-        if (this$row == null ? other$row != null : !this$row.equals(other$row)) return false;
+        if (this$row == null ? other$row != null : !this$row.equals(other$row))
+            return false;
         return true;
     }
 

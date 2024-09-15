@@ -15,12 +15,14 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-
 package org.spacious_team.table_wrapper.api;
-
+import javax.annotation.Nullable;
 public interface TableColumn {
+
     int NOCOLUMN_INDEX = -1;
+
     TableColumn NOCOLUMN = (i, j) -> NOCOLUMN_INDEX;
+
     TableColumn LEFTMOST_COLUMN = (firstColumnForSearch, $) -> firstColumnForSearch;
 
     /**
@@ -36,5 +38,5 @@ public interface TableColumn {
      * @param headerRows header rows
      * @return column index of table
      */
-    int getColumnIndex(int firstColumnForSearch, ReportPageRow... headerRows);
+    int getColumnIndex(@Nullable int firstColumnForSearch, @Nullable ReportPageRow... headerRows);
 }
