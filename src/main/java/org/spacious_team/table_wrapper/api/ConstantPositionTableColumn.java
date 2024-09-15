@@ -17,12 +17,13 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 package org.spacious_team.table_wrapper.api;
-
+import javax.annotation.Nullable;
 public class ConstantPositionTableColumn implements TableColumn {
+
     private final int columnIndex;
 
     @Override
-    public int getColumnIndex(int firstColumnForSearch, ReportPageRow... headerRows) {
+    public int getColumnIndex(@Nullable int firstColumnForSearch, @Nullable ReportPageRow... headerRows) {
         return columnIndex;
     }
 

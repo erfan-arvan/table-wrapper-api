@@ -17,10 +17,11 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 package org.spacious_team.table_wrapper.api;
-
+import javax.annotation.Nullable;
 import java.util.Arrays;
 
 public class AnyOfTableColumn implements TableColumn {
+
     private final TableColumn[] columns;
 
     public static TableColumn of(TableColumn... columns) {
@@ -47,11 +48,15 @@ public class AnyOfTableColumn implements TableColumn {
     @java.lang.Override
     @java.lang.SuppressWarnings("all")
     public boolean equals(final java.lang.Object o) {
-        if (o == this) return true;
-        if (!(o instanceof AnyOfTableColumn)) return false;
+        if (o == this)
+            return true;
+        if (!(o instanceof AnyOfTableColumn))
+            return false;
         final AnyOfTableColumn other = (AnyOfTableColumn) o;
-        if (!other.canEqual((java.lang.Object) this)) return false;
-        if (!java.util.Arrays.deepEquals(this.columns, other.columns)) return false;
+        if (!other.canEqual((java.lang.Object) this))
+            return false;
+        if (!java.util.Arrays.deepEquals(this.columns, other.columns))
+            return false;
         return true;
     }
 

@@ -15,16 +15,14 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-
 package org.spacious_team.table_wrapper.api;
-
+import javax.annotation.Nullable;
 import java.util.function.Predicate;
-
 import static java.util.Objects.requireNonNull;
 
 public interface TableFactory {
 
-    boolean canHandle(ReportPage reportPage);
+    boolean canHandle(@Nullable ReportPage reportPage);
 
     /**
      * Creates table which starts with name followed by header and ends with row containing cell with text starting with
@@ -33,10 +31,7 @@ public interface TableFactory {
      * @param tableName     table name's row should contain cell which starts with given text
      * @param lastRowString table's last row should contain cell which starts with given text
      */
-    default Table create(ReportPage reportPage,
-                         String tableName,
-                         String lastRowString,
-                         Class<? extends TableColumnDescription> headerDescription) {
+    default Table create(ReportPage reportPage, String tableName, String lastRowString, Class<? extends TableColumnDescription> headerDescription) {
         return create(reportPage, tableName, lastRowString, headerDescription, 1);
     }
 
@@ -45,9 +40,7 @@ public interface TableFactory {
      *
      * @param tableName table name's row should contain cell which starts with given text
      */
-    default Table create(ReportPage reportPage,
-                         String tableName,
-                         Class<? extends TableColumnDescription> headerDescription) {
+    default Table create(ReportPage reportPage, String tableName, Class<? extends TableColumnDescription> headerDescription) {
         return create(reportPage, tableName, headerDescription, 1);
     }
 
@@ -58,16 +51,8 @@ public interface TableFactory {
      * @param tableName     table name's row should contain cell which starts with given text
      * @param lastRowString table's last row should contain cell which starts with given text
      */
-    default Table create(ReportPage reportPage,
-                         String tableName,
-                         String lastRowString,
-                         Class<? extends TableColumnDescription> headerDescription,
-                         int headersRowCount) {
-        return create(reportPage,
-                tableName,
-                reportPage.getTableCellRange(tableName, headersRowCount, lastRowString),
-                headerDescription,
-                headersRowCount);
+    default Table create(ReportPage reportPage, String tableName, String lastRowString, Class<? extends TableColumnDescription> headerDescription, int headersRowCount) {
+        return create(reportPage, tableName, reportPage.getTableCellRange(tableName, headersRowCount, lastRowString), headerDescription, headersRowCount);
     }
 
     /**
@@ -75,15 +60,8 @@ public interface TableFactory {
      *
      * @param tableName table name's row should contain cell which starts with given text
      */
-    default Table create(ReportPage reportPage,
-                         String tableName,
-                         Class<? extends TableColumnDescription> headerDescription,
-                         int headersRowCount) {
-        return create(reportPage,
-                tableName,
-                reportPage.getTableCellRange(tableName, headersRowCount),
-                headerDescription,
-                headersRowCount);
+    default Table create(ReportPage reportPage, String tableName, Class<? extends TableColumnDescription> headerDescription, int headersRowCount) {
+        return create(reportPage, tableName, reportPage.getTableCellRange(tableName, headersRowCount), headerDescription, headersRowCount);
     }
 
     /**
@@ -92,10 +70,7 @@ public interface TableFactory {
      * @param tableNameFinder table name containing row should contain cell satisfying predicate
      * @param lastRowFinder   table's last row should contain cell satisfying predicate
      */
-    default Table create(ReportPage reportPage,
-                         Predicate<Object> tableNameFinder,
-                         Predicate<Object> lastRowFinder,
-                         Class<? extends TableColumnDescription> headerDescription) {
+    default Table create(ReportPage reportPage, Predicate<Object> tableNameFinder, Predicate<Object> lastRowFinder, Class<? extends TableColumnDescription> headerDescription) {
         return create(reportPage, tableNameFinder, lastRowFinder, headerDescription, 1);
     }
 
@@ -105,9 +80,7 @@ public interface TableFactory {
      *
      * @param tableNameFinder table name containing row should contain cell satisfying predicate
      */
-    default Table create(ReportPage reportPage,
-                         Predicate<Object> tableNameFinder,
-                         Class<? extends TableColumnDescription> headerDescription) {
+    default Table create(ReportPage reportPage, Predicate<Object> tableNameFinder, Class<? extends TableColumnDescription> headerDescription) {
         return create(reportPage, tableNameFinder, headerDescription, 1);
     }
 
@@ -117,20 +90,14 @@ public interface TableFactory {
      * @param tableNameFinder table name containing row should contain cell satisfying predicate
      * @param lastRowFinder   table's last row should contain cell satisfying predicate
      */
-    default Table create(ReportPage reportPage,
-                         Predicate<Object> tableNameFinder,
-                         Predicate<Object> lastRowFinder,
-                         Class<? extends TableColumnDescription> headerDescription,
-                         int headersRowCount) {
+    default Table create(ReportPage reportPage, Predicate<Object> tableNameFinder, Predicate<Object> lastRowFinder, Class<? extends TableColumnDescription> headerDescription, int headersRowCount) {
         String tableName = "<not found>";
         TableCellRange range = reportPage.getTableCellRange(tableNameFinder, headersRowCount, lastRowFinder);
         //noinspection DuplicatedCode
         if (!range.equals(TableCellRange.EMPTY_RANGE)) {
-            TableCellAddress tableNameCell =
-                    reportPage.find(range.getFirstRow(), range.getFirstRow() + 1, tableNameFinder);
+            TableCellAddress tableNameCell = reportPage.find(range.getFirstRow(), range.getFirstRow() + 1, tableNameFinder);
             if (!tableNameCell.equals(TableCellAddress.NOT_FOUND)) {
                 try {
-                    
                     TableCell cell = requireNonNull(reportPage.getCell(tableNameCell));
                     tableName = cell.getStringValue();
                 } catch (Exception ignore) {
@@ -146,19 +113,14 @@ public interface TableFactory {
      *
      * @param tableNameFinder table name containing row should contain cell satisfying predicate
      */
-    default Table create(ReportPage reportPage,
-                         Predicate<Object> tableNameFinder,
-                         Class<? extends TableColumnDescription> headerDescription,
-                         int headersRowCount) {
+    default Table create(ReportPage reportPage, Predicate<Object> tableNameFinder, Class<? extends TableColumnDescription> headerDescription, int headersRowCount) {
         String tableName = "<not found>";
         TableCellRange range = reportPage.getTableCellRange(tableNameFinder, headersRowCount);
         //noinspection DuplicatedCode
         if (!range.equals(TableCellRange.EMPTY_RANGE)) {
-            TableCellAddress tableNameCell =
-                    reportPage.find(range.getFirstRow(), range.getFirstRow() + 1, tableNameFinder);
+            TableCellAddress tableNameCell = reportPage.find(range.getFirstRow(), range.getFirstRow() + 1, tableNameFinder);
             if (!tableNameCell.equals(TableCellAddress.NOT_FOUND)) {
                 try {
-                    
                     TableCell cell = requireNonNull(reportPage.getCell(tableNameCell));
                     tableName = cell.getStringValue();
                 } catch (Exception ignore) {
@@ -175,10 +137,7 @@ public interface TableFactory {
      * @param firstRowString table first row should contain cell which starts with given text
      * @param lastRowString  table's last row should contain cell which starts with given text
      */
-    default Table createNameless(ReportPage reportPage,
-                                 String firstRowString,
-                                 String lastRowString,
-                                 Class<? extends TableColumnDescription> headerDescription) {
+    default Table createNameless(ReportPage reportPage, String firstRowString, String lastRowString, Class<? extends TableColumnDescription> headerDescription) {
         return createNameless(reportPage, "undefined", firstRowString, lastRowString, headerDescription, 1);
     }
 
@@ -187,9 +146,7 @@ public interface TableFactory {
      *
      * @param firstRowString table first row should contain cell which starts with given text
      */
-    default Table createNameless(ReportPage reportPage,
-                                 String firstRowString,
-                                 Class<? extends TableColumnDescription> headerDescription) {
+    default Table createNameless(ReportPage reportPage, String firstRowString, Class<? extends TableColumnDescription> headerDescription) {
         return createNameless(reportPage, "undefined", firstRowString, headerDescription, 1);
     }
 
@@ -201,18 +158,12 @@ public interface TableFactory {
      * @param firstRowString    table first row should contain cell which starts with given text
      * @param lastRowString     table's last row should contain cell which starts with given text
      */
-    default Table createNameless(ReportPage reportPage,
-                                 String providedTableName,
-                                 String firstRowString,
-                                 String lastRowString,
-                                 Class<? extends TableColumnDescription> headerDescription,
-                                 int headersRowCount) {
-        return create(reportPage,
-                providedTableName,
-                reportPage.getTableCellRange(firstRowString, headersRowCount, lastRowString)
-                        .addRowsToTop(1), // add fantom first line for provided table name
-                headerDescription,
-                headersRowCount);
+    default Table createNameless(ReportPage reportPage, String providedTableName, String firstRowString, String lastRowString, Class<? extends TableColumnDescription> headerDescription, int headersRowCount) {
+        return // add fantom first line for provided table name
+        // add fantom first line for provided table name
+        create(// add fantom first line for provided table name
+        reportPage, // add fantom first line for provided table name
+        providedTableName, reportPage.getTableCellRange(firstRowString, headersRowCount, lastRowString).addRowsToTop(1), headerDescription, headersRowCount);
     }
 
     /**
@@ -221,17 +172,12 @@ public interface TableFactory {
      * @param providedTableName predefined (not existing in reportPage) table name
      * @param firstRowString    table first row should contain cell which starts with given text
      */
-    default Table createNameless(ReportPage reportPage,
-                                 String providedTableName,
-                                 String firstRowString,
-                                 Class<? extends TableColumnDescription> headerDescription,
-                                 int headersRowCount) {
-        return create(reportPage,
-                providedTableName,
-                reportPage.getTableCellRange(firstRowString, headersRowCount)
-                        .addRowsToTop(1), // add fantom first line for provided table name
-                headerDescription,
-                headersRowCount);
+    default Table createNameless(ReportPage reportPage, String providedTableName, String firstRowString, Class<? extends TableColumnDescription> headerDescription, int headersRowCount) {
+        return // add fantom first line for provided table name
+        // add fantom first line for provided table name
+        create(// add fantom first line for provided table name
+        reportPage, // add fantom first line for provided table name
+        providedTableName, reportPage.getTableCellRange(firstRowString, headersRowCount).addRowsToTop(1), headerDescription, headersRowCount);
     }
 
     /**
@@ -240,10 +186,7 @@ public interface TableFactory {
      * @param firstRowFinder table first row should contain cell satisfying predicate
      * @param lastRowFinder  table's last row should contain cell satisfying predicate
      */
-    default Table createNameless(ReportPage reportPage,
-                                 Predicate<Object> firstRowFinder,
-                                 Predicate<Object> lastRowFinder,
-                                 Class<? extends TableColumnDescription> headerDescription) {
+    default Table createNameless(ReportPage reportPage, Predicate<Object> firstRowFinder, Predicate<Object> lastRowFinder, Class<? extends TableColumnDescription> headerDescription) {
         return createNameless(reportPage, "undefined", firstRowFinder, lastRowFinder, headerDescription, 1);
     }
 
@@ -253,9 +196,7 @@ public interface TableFactory {
      *
      * @param firstRowFinder table first row should contain cell satisfying predicate
      */
-    default Table createNameless(ReportPage reportPage,
-                                 Predicate<Object> firstRowFinder,
-                                 Class<? extends TableColumnDescription> headerDescription) {
+    default Table createNameless(ReportPage reportPage, Predicate<Object> firstRowFinder, Class<? extends TableColumnDescription> headerDescription) {
         return createNameless(reportPage, "undefined", firstRowFinder, headerDescription, 1);
     }
 
@@ -266,18 +207,12 @@ public interface TableFactory {
      * @param firstRowFinder    table first row should contain cell satisfying predicate
      * @param lastRowFinder     table's last row should contain cell satisfying predicate
      */
-    default Table createNameless(ReportPage reportPage,
-                                 String providedTableName,
-                                 Predicate<Object> firstRowFinder,
-                                 Predicate<Object> lastRowFinder,
-                                 Class<? extends TableColumnDescription> headerDescription,
-                                 int headersRowCount) {
-        return create(reportPage,
-                providedTableName,
-                reportPage.getTableCellRange(firstRowFinder, headersRowCount, lastRowFinder)
-                        .addRowsToTop(1), // add fantom first line for provided table name
-                headerDescription,
-                headersRowCount);
+    default Table createNameless(ReportPage reportPage, String providedTableName, Predicate<Object> firstRowFinder, Predicate<Object> lastRowFinder, Class<? extends TableColumnDescription> headerDescription, int headersRowCount) {
+        return // add fantom first line for provided table name
+        // add fantom first line for provided table name
+        create(// add fantom first line for provided table name
+        reportPage, // add fantom first line for provided table name
+        providedTableName, reportPage.getTableCellRange(firstRowFinder, headersRowCount, lastRowFinder).addRowsToTop(1), headerDescription, headersRowCount);
     }
 
     /**
@@ -287,23 +222,13 @@ public interface TableFactory {
      * @param providedTableName predefined (not existing in reportPage) table name
      * @param firstRowFinder    table first row should contain cell satisfying predicate
      */
-    default Table createNameless(ReportPage reportPage,
-                                 String providedTableName,
-                                 Predicate<Object> firstRowFinder,
-                                 Class<? extends TableColumnDescription> headerDescription,
-                                 int headersRowCount) {
-        return create(reportPage,
-                providedTableName,
-                reportPage.getTableCellRange(firstRowFinder, headersRowCount)
-                        .addRowsToTop(1), // add fantom first line for provided table name
-                headerDescription,
-                headersRowCount);
+    default Table createNameless(ReportPage reportPage, String providedTableName, Predicate<Object> firstRowFinder, Class<? extends TableColumnDescription> headerDescription, int headersRowCount) {
+        return // add fantom first line for provided table name
+        // add fantom first line for provided table name
+        create(// add fantom first line for provided table name
+        reportPage, // add fantom first line for provided table name
+        providedTableName, reportPage.getTableCellRange(firstRowFinder, headersRowCount).addRowsToTop(1), headerDescription, headersRowCount);
     }
 
-
-    Table create(ReportPage reportPage,
-                 String tableName,
-                 TableCellRange tableRange,
-                 Class<? extends TableColumnDescription> headerDescription,
-                 int headersRowCount);
+    Table create(@Nullable ReportPage reportPage, @Nullable String tableName, @Nullable TableCellRange tableRange, @Nullable Class<? extends TableColumnDescription> headerDescription, @Nullable int headersRowCount);
 }

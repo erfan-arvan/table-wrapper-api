@@ -17,8 +17,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 package org.spacious_team.table_wrapper.api;
-
-import org.checkerframework.checker.nullness.qual.Nullable;
+import javax.annotation.Nullable;
 import java.math.BigDecimal;
 import java.time.Instant;
 import java.time.LocalDateTime;
@@ -26,18 +25,18 @@ import java.util.Iterator;
 import static java.util.Collections.emptyIterator;
 
 class EmptyTableRow implements TableRow {
+
     private final Table table;
+
     private final int rowNum;
 
-    
     @Override
-    public TableCell getCell(TableColumnDescription column) {
+    public TableCell getCell(@Nullable TableColumnDescription column) {
         return null;
     }
 
-    
     @Override
-    public TableCell getCell(int i) {
+    public TableCell getCell(@Nullable int i) {
         return null;
     }
 
@@ -52,7 +51,7 @@ class EmptyTableRow implements TableRow {
     }
 
     @Override
-    public boolean rowContains(Object expected) {
+    public boolean rowContains(@Nullable Object expected) {
         return false;
     }
 
@@ -61,44 +60,43 @@ class EmptyTableRow implements TableRow {
         return emptyIterator();
     }
 
-    
     @Override
-    public Object getCellValue(TableColumnDescription column) {
+    public Object getCellValue(@Nullable TableColumnDescription column) {
         return null;
     }
 
     @Override
-    public int getIntCellValue(TableColumnDescription column) {
+    public int getIntCellValue(@Nullable TableColumnDescription column) {
         throw new NullPointerException("Cell not found");
     }
 
     @Override
-    public long getLongCellValue(TableColumnDescription column) {
+    public long getLongCellValue(@Nullable TableColumnDescription column) {
         throw new NullPointerException("Cell not found");
     }
 
     @Override
-    public double getDoubleCellValue(TableColumnDescription column) {
+    public double getDoubleCellValue(@Nullable TableColumnDescription column) {
         throw new NullPointerException("Cell not found");
     }
 
     @Override
-    public BigDecimal getBigDecimalCellValue(TableColumnDescription column) {
+    public BigDecimal getBigDecimalCellValue(@Nullable TableColumnDescription column) {
         throw new NullPointerException("Cell not found");
     }
 
     @Override
-    public String getStringCellValue(TableColumnDescription column) {
+    public String getStringCellValue(@Nullable TableColumnDescription column) {
         throw new NullPointerException("Cell not found");
     }
 
     @Override
-    public Instant getInstantCellValue(TableColumnDescription column) {
+    public Instant getInstantCellValue(@Nullable TableColumnDescription column) {
         throw new NullPointerException("Cell not found");
     }
 
     @Override
-    public LocalDateTime getLocalDateTimeCellValue(TableColumnDescription column) {
+    public LocalDateTime getLocalDateTimeCellValue(@Nullable TableColumnDescription column) {
         throw new NullPointerException("Cell not found");
     }
 
@@ -130,14 +128,19 @@ class EmptyTableRow implements TableRow {
     @java.lang.Override
     @java.lang.SuppressWarnings("all")
     public boolean equals(final java.lang.Object o) {
-        if (o == this) return true;
-        if (!(o instanceof EmptyTableRow)) return false;
+        if (o == this)
+            return true;
+        if (!(o instanceof EmptyTableRow))
+            return false;
         final EmptyTableRow other = (EmptyTableRow) o;
-        if (!other.canEqual((java.lang.Object) this)) return false;
-        if (this.getRowNum() != other.getRowNum()) return false;
+        if (!other.canEqual((java.lang.Object) this))
+            return false;
+        if (this.getRowNum() != other.getRowNum())
+            return false;
         final java.lang.Object this$table = this.getTable();
         final java.lang.Object other$table = other.getTable();
-        if (this$table == null ? other$table != null : !this$table.equals(other$table)) return false;
+        if (this$table == null ? other$table != null : !this$table.equals(other$table))
+            return false;
         return true;
     }
 

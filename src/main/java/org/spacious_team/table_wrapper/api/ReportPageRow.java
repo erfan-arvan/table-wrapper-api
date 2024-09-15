@@ -15,10 +15,8 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-
 package org.spacious_team.table_wrapper.api;
-
-import org.checkerframework.checker.nullness.qual.Nullable;
+import javax.annotation.Nullable;
 
 public interface ReportPageRow extends Iterable<TableCell> {
 
@@ -26,8 +24,7 @@ public interface ReportPageRow extends Iterable<TableCell> {
      * @param i zero-based cell number
      * @return cell ot null if cell does not exist
      */
-    
-    TableCell getCell(int i);
+    TableCell getCell(@Nullable int i);
 
     /**
      * Zero-based row number
@@ -48,5 +45,5 @@ public interface ReportPageRow extends Iterable<TableCell> {
      * @param expected searching value
      * @return true if any cell of this row has exact value, false otherwise
      */
-    boolean rowContains(Object expected);
+    boolean rowContains(@Nullable Object expected);
 }

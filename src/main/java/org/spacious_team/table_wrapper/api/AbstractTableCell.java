@@ -17,17 +17,17 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 package org.spacious_team.table_wrapper.api;
-
-import org.checkerframework.checker.nullness.qual.Nullable;
+import javax.annotation.Nullable;
 import java.math.BigDecimal;
 import java.time.Instant;
 import java.time.LocalDateTime;
 
 public abstract class AbstractTableCell<T> implements TableCell {
+
     private final T cell;
+
     private final CellDataAccessObject<T, ?> dao;
 
-    
     @Override
     public Object getValue() {
         return dao.getValue(cell);

@@ -17,10 +17,13 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 package org.spacious_team.table_wrapper.api;
-
+import javax.annotation.Nullable;
 public class TableCellAddress {
+
     public static final TableCellAddress NOT_FOUND = new TableCellAddress(-1, -1);
+
     private final int row;
+
     private final int column;
 
     @java.lang.SuppressWarnings("all")
@@ -36,12 +39,17 @@ public class TableCellAddress {
     @java.lang.Override
     @java.lang.SuppressWarnings("all")
     public boolean equals(final java.lang.Object o) {
-        if (o == this) return true;
-        if (!(o instanceof TableCellAddress)) return false;
+        if (o == this)
+            return true;
+        if (!(o instanceof TableCellAddress))
+            return false;
         final TableCellAddress other = (TableCellAddress) o;
-        if (!other.canEqual((java.lang.Object) this)) return false;
-        if (this.getRow() != other.getRow()) return false;
-        if (this.getColumn() != other.getColumn()) return false;
+        if (!other.canEqual((java.lang.Object) this))
+            return false;
+        if (this.getRow() != other.getRow())
+            return false;
+        if (this.getColumn() != other.getColumn())
+            return false;
         return true;
     }
 
